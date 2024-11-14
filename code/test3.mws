@@ -1,0 +1,120 @@
+{VERSION 4 0 "IBM INTEL NT" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 80 "# Kiem tra EvalSolw
+\n# va so sanh voi thu tuc solve cua Maple\nwith(MangTinhToan);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7(%)ApQuanheG%)BaodongwG%)EvalSolwG%,O
+pSolutionwG%,ReadObjectwG%*SolutionwG" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 75 "H:=\{b,B,a\}; G:=\{S,p\};\nF:=OpSolutionw(\"C:/Mang_T
+inh_Toan/TAM_GIAC.txt\",H,G);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"H
+G<%%\"BG%\"aG%\"bG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG<$%\"pG%\"
+SG" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%\"FG7$%%trueG7(7)Q0~~~relation
+~~236\"\"\"\"<%%\"BG%\"aG%#hcGF+<\"%/~hc~=~a*sin(B)G\"\"%7)Q/~~relatio
+n~~24F*F+<%%\"AG%\"bGF/F+F0%.hc~=~b*sin(A)GF27)Q/~~~relation~~0F*F+<%F
+6F-%\"CGF+F0%.~~A+B+C~=~Pi~G\"\"#7)Q.~~relation~~5F*F+<&F-F7%\"cGF<F+F
+0%4b*sin(C)~=~c*sin(B)G\"\")7)Q0~~~relation~~10F*F+<&%\"pGF.F7FBF+F0%,
+2*p~=~a+b+cGF27)Q0~~~relation~~13F*F+<%%\"SGFBF/F+F0%+S~=~c*hc/2GF2" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "F := F[2];" }}{PARA 12 "" 
+1 "" {XPPMATH 20 "6#>%\"FG7(7)Q0~~~relation~~236\"\"\"\"<%%\"BG%\"aG%#
+hcGF)<\"%/~hc~=~a*sin(B)G\"\"%7)Q/~~relation~~24F(F)<%%\"AG%\"bGF-F)F.
+%.hc~=~b*sin(A)GF07)Q/~~~relation~~0F(F)<%F4F+%\"CGF)F.%.~~A+B+C~=~Pi~
+G\"\"#7)Q.~~relation~~5F(F)<&F+F5%\"cGF:F)F.%4b*sin(C)~=~c*sin(B)G\"\"
+)7)Q0~~~relation~~10F(F)<&%\"pGF,F5F@F)F.%,2*p~=~a+b+cGF07)Q0~~~relati
+on~~13F(F)<%%\"SGF@F-F)F.%+S~=~c*hc/2GF0" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "EvalSolw(F,H,G);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#<
+$/%\"pG,$*&,(*&%\"aG\"\"\"-%$sinG6#%\"BGF+F+*&%\"bGF+F,F+F+*&F1F+-F-6#
+,&-%'arcsinG6#*&*&F*F+F,F+F+F1!\"\"F+F/F+F+F+F+F,F;#F+\"\"#/%\"SG,$*(F
+1F+F3F+F*F+F<" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 233 "Get_equat
+ions := proc(F::list)\n  # trich ra tap hop cac cong thuc tu cac quan \+
+he trong\n  # F de thanh lap mot he phuong trinh\nlocal eqns::set, f;
+\neqns := \{\};\nfor f in F do\n  eqns := `union`(eqns,\{parse(f[6])\}
+);\nod;\nRETURN(eqns);\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 26 "he_pt := Get_equations(F);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%
+&he_ptG<(/%#hcG*&%\"aG\"\"\"-%$sinG6#%\"BGF*/F'*&%\"bGF*-F,6#%\"AGF*/,
+(F4F*F.F*%\"CGF*%#PiG/*&F1F*-F,6#F7F**&%\"cGF*F+F*/,$%\"pG\"\"#,(F)F*F
+1F*F>F*/%\"SG,$*&F>F*F'F*#F*FB" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 15 "solve(he_pt,G);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 69 "
+# Lenh solve cua Maple khong giai duoc ra ket qua\n# nhu ham EvalSolw
+\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "F:=OpSolutionw(\"C:/M
+ang_Tinh_Toan/TAM_GIAC.txt\",\{A,B\},\{C\})[2];" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"FG7#7)Q/~~~relation~~06\"\"\"\"<%%\"AG%\"BG%\"CGF)<
+\"%.~~A+B+C~=~Pi~G\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "
+EvalSolw(F,\{A,B\},\{C\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#<#/%\"CG
+,(%\"AG!\"\"%\"BGF(%#PiG\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 26 "he_pt := Get_equations(F);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>%&he_ptG<#/,(%\"AG\"\"\"%\"BGF)%\"CGF)%#PiG" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 17 "solve(he_pt,\{C\});" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#<#/%\"CG,(%\"AG!\"\"%\"BGF(%#PiG\"\"\"" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 64 "F:=OpSolutionw(\"C:/Mang_Tinh_Toan/TAM_GIAC.txt\",\{A
+,B,a\},\{S\})[2];" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%\"FG7'7)Q/~~~re
+lation~~06\"\"\"\"<%%\"AG%\"BG%\"CGF)<\"%.~~A+B+C~=~Pi~G\"\"#7)Q0~~~re
+lation~~23F(F)<%F,%\"aG%#hcGF)F.%/~hc~=~a*sin(B)G\"\"%7)Q/~~relation~~
+24F(F)<%F+%\"bGF5F)F.%.hc~=~b*sin(A)GF77)Q/~~relation~~19F(F)<%%#haGF;
+F-F)F.%/~ha~=~b*sin(C)GF77)Q0~~~relation~~11F(F)<%F@%\"SGF4F)F.%,~S~=~
+a*ha/2GF7" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "EvalSolw(F,\{A
+,B,a\},\{S\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#<#/%\"SG,$*&*()%\"aG
+\"\"#\"\"\"-%$sinG6#%\"BGF,-F.6#,&%\"AGF,F0F,F,F,-F.6#F4!\"\"#F,F+" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "he_pt := Get_equations(F);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&he_ptG<'/,(%\"AG\"\"\"%\"BGF)%
+\"CGF)%#PiG/%#hcG*&%\"bGF)-%$sinG6#F(F)/F.*&%\"aGF)-F26#F*F)/%\"SG,$*&
+F6F)%#haGF)#F)\"\"#/F=*&F0F)-F26#F+F)" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 17 "solve(he_pt,\{S\});" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 115 "# Neu ghi ra tat ca cac bien trung gian thi thu tuc
+\n# solve cua Maple co the tinh duoc:\nsolve(he_pt,\{C,hc,b,ha,S\});" 
+}}{PARA 12 "" 1 "" {XPPMATH 20 "6#<'/%\"SG,$*&*()%\"aG\"\"#\"\"\"-%$si
+nG6#%\"BGF,-F.6#,&%\"AGF,F0F,F,F,-F.6#F4!\"\"#F,F+/%#hcG*&F*F,F-F,/%\"
+CG,(F4F7F0F7%#PiGF,/%\"bG*&*&F*F,F-F,F,F5F7/%#haG*&*(F*F,F-F,F1F,F,F5F
+7" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 147 "# Nhung neu lay het t
+at ca cac cong thuc thi thu tuc\n# solve khong giai ra duoc ket qua\nb
+ienlist:=ReadObjectw(\"C:/Mang_Tinh_Toan/TAM_GIAC.txt\")[2];" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 52 "F:=ReadObjectw(\"C:/Mang_Tinh_Toan/TAM_GI
+AC.txt\")[3];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%)bienlistG78%\"aG%
+\"bG%\"cG%\"AG%\"BG%\"CG%#haG%#hbG%#hcG%#maG%#mbG%#mcG%#paG%#pbG%#pcG%
+\"SG%\"pG%\"RG%\"rG%#raG%#rbG%#rcG" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#
+>%\"FG7;7)Q/~~~relation~~06\"\"\"\"<%%\"AG%\"BG%\"CGF)<\"%.~~A+B+C~=~P
+i~G\"\"#7)Q/~~~relation~~1F(\"\"!<&F+%\"aG%\"bG%\"cGF)<#F5%A~~a^2~=~b^
+2~+~c^2~-~2*b*c*cos(A)G\"#>7)Q/~~~relation~~2F(F3<&F,F5F6F7F)<#F6%A(b^
+2~=~a^2~+~c^2~-~2*a*c*cos(B))GF:7)Q/~~~relation~~3F(F3<&F5F6F7F-F)<#F7
+%?c^2~=~a^2~+~b^2~-~2*a*b*cos(C)GF:7)Q/~~~relation~~4F(F)<&F+F,F5F6F)F
+.%5a*sin(B)~=~b*sin(A)~G\"\")7)Q.~~relation~~5F(F)<&F,F6F7F-F)F.%4b*si
+n(C)~=~c*sin(B)GFI7)Q/~~~relation~~6F(F)<&F+F5F7F-F)F.%4a*sin(C)~=~c*s
+in(A)GFI7)Q0~~~~relation~~7F(F)<%F+F5%\"RGF)F.%/a~=~2*R*sin(A)G\"\"'7)
+Q/~~~relation~~8F(F)<%F,F6FUF)F.%/b~=~2*R*sin(B)GFW7)Q/~~~relation~~9F
+(F)<%FUF7F-F)F.%/c~=~2*R*sin(C)GFW7)Q0~~~relation~~10F(F)<&%\"pGF5F6F7
+F)F.%,2*p~=~a+b+cG\"\"%7)Q0~~~relation~~11F(F)<%%#haG%\"SGF5F)F.%,~S~=
+~a*ha/2GF_o7)Q0~~~relation~~12F(F)<%FdoF6%#hbGF)F.%+S~=~b*hb/2GF_o7)Q0
+~~~relation~~13F(F)<%FdoF7%#hcGF)F.%+S~=~c*hc/2GF_o7)Q0~~~relation~~14
+F(F)<%F]oFdo%\"rGF)F.%(S~=~p*rGF07)Q0~~~relation~~15F(F3<'F]oFdoF5F6F7
+F)<#Fdo%>S~=~sqrt(p*(p-a)*(p-b)*(p-c))G\"#77)Q0~~~relation~~16F(F)<&F+
+FdoF6F7F)F.%1S~=~b*c*sin(A)/2GFI7)Q/~~relation~~17F(F)<&FdoF,F5F7F)F.%
+2~S~=~a*c*sin(B)/2GFI7)Q/~~relation~~18F(F)<&FdoF5F6F-F)F.%2~S~=~a*b*s
+in(C)/2GFI7)Q/~~relation~~19F(F)<%FcoF6F-F)F.%/~ha~=~b*sin(C)GF_o7)Q0~
+~~relation~~20F(F)<%FcoF,F7F)F.%.ha~=~c*sin(B)GF_o7)Q/~~relation~~21F(
+F)<%F5FioF-F)F.%.hb~=~a*sin(C)GF_o7)Q0~~~relation~~22F(F)<%F+FioF7F)F.
+%/~hb~=~c*sin(A)GF_o7)Q0~~~relation~~23F(F)<%F,F5F^pF)F.%/~hc~=~a*sin(
+B)GF_o7)Q/~~relation~~24F(F)<%F+F6F^pF)F.%.hc~=~b*sin(A)GF_o" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "he_pt := Get_equations(F);" 
+}}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%&he_ptG<;/*$)%\"bG\"\"#\"\"\",(*$)
+%\"aGF*F+F+*$)%\"cGF*F+F+**F*F+F/F+F2F+-%$cosG6#%\"BGF+!\"\"/,(%\"AGF+
+F7F+%\"CGF+%#PiG/%#hcG*&F)F+-%$sinG6#F;F+/F?*&F/F+-FBF6F+/%\"SG,$*&F/F
++%#haGF+#F+F*/FK*&F)F+-FB6#F<F+/F-,(F'F+F0F+**F*F+F)F+F2F+-F5FCF+F8/F0
+,(F-F+F'F+**F*F+F/F+F)F+-F5FPF+F8/FEF@/FN*&F2F+FFF+/*&F/F+FOF+*&F2F+FA
+F+/F/,$*&%\"RGF+FAF+F*/F),$*&F\\oF+FFF+F*/F2,$*&F\\oF+FOF+F*/,$%\"pGF*
+,(F/F+F)F+F2F+/FH,$*&F)F+%#hbGF+FL/FH,$*&F2F+F?F+FL/FH*&FeoF+%\"rGF+/F
+H-%%sqrtG6#**FeoF+,&FeoF+F/F8F+,&FeoF+F)F8F+,&FeoF+F2F8F+/FH,$*(F)F+F2
+F+FAF+FL/FH,$*(F/F+F2F+FFF+FL/FH,$*(F/F+F)F+FOF+FL/FKFen/FjoFgn/FjoFhn
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "G:=`minus`(convert(bien
+list,set),\{A,B,a\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG<5%#mcG
+%#pbG%#haG%#rcG%#pcG%\"pG%\"SG%\"bG%\"RG%#hbG%#maG%#mbG%#paG%\"cG%\"CG
+%#hcG%\"rG%#rbG%#raG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "sol
+ve(he_pt,G);\n# solve khong giai ra duoc ket qua" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "22 0 0" 0 }{VIEWOPTS 1 1 0 1 1 
+1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

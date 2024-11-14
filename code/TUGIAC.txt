@@ -1,0 +1,13 @@
+
+object= TU_GIAC
+    TuGiac[A, B, C, D]
+   variables
+        S: Dien tich
+   endvariables
+
+   relation  0
+     flag = 1
+     Mf    ={A, B, C, D}
+     rf    =1
+     vf    ={}
+     expf =`  A+B+C+D = 2*Pi `

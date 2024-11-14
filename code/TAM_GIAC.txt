@@ -1,0 +1,232 @@
+
+object= TAM_GIAC
+
+  TamGiac[A, B, C]
+   variables
+      a : Doan[B, C]
+      b : Doan[A, C]
+      c : Doan[A, B]
+      alpha ="Goc ung voi dinh A cua tam giac"
+      beta ="Goc ung voi dinh B cua tam giac"
+      gamma  ="Goc ung voi dinh C cua tam giac"
+      ha  ="Duong cao ung voi canh a trong tam giac"
+      hb  ="Duong cao ung voi canh b trong tam giac"
+      hc  ="Duong cao ung voi canh c trong tam giac"
+      ma = "Duong trung tuyen ung voi canh a trong tam giac"
+      mb  ="Duong trung tuyen ung voi canh b trong tam giac"
+      mc = "Duong trung tuyen ung voi canh c trong tam giac"
+      pa  ="Duong phan giac ung voi canh a trong tam giac"
+      pb = "Duong phan giac ung voi canh b trong tam giac"
+      pc  ="Duong phan giac ung voi canh c trong tam giac"
+      S  ="Dien tich tam giac"
+      P ="Chu vi cua tam giac"
+      p ="Nua chu vi cua tam giac"
+      R = "Ban kinh duong tron ngoai tiep tam giac"
+      r  ="Ban kinh duong tron noi tiep tam giac"
+	 ra = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh a (hay góc A)."
+	 rb = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh b (hay góc B)."
+	 rc = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh c (hay góc C)."
+   endvariables
+
+   relation  0
+     flag = 1
+     Mf    ={A, B, C}
+     rf    =1
+     vf    ={}
+     expf =`  A+B+C = Pi `
+
+   relation  1
+     flag = 0
+     Mf    ={a, b, c, A}
+     rf    =1
+     vf    ={a}
+     expf  =`a^2 = b^2 + c^2 - 2*b*c*cos(A)`
+     cost=19
+
+   relation  2
+     flag = 0
+     Mf    ={a, b, c, B}
+     rf    =1
+     vf    ={b}
+     expf  =`b^2 = a^2 + c^2 - 2*a*c*cos(B)`
+     cost=19
+
+   relation  3
+     flag  =0
+     Mf    ={a, b, c, C}
+     rf    =1
+     vf    ={c}
+     expf = `c^2 = a^2 + b^2 - 2*a*b*cos(C)`
+     cost=19
+
+   relation  4
+     flag = 1
+     Mf  ={ a, b, A, B}
+     rf    =1
+     vf   ={}
+     expf = `a*sin(B) = b*sin(A) `
+
+  relation  5
+     flag = 1
+     Mf    ={b, c, B, C}
+     rf    =1
+     vf    ={}
+     expf = `b*sin(C) = c*sin(B)`
+     cost=8
+
+   relation  6
+     flag = 1
+     Mf    ={a, c, A, C}
+     rf    =1
+     vf    ={}
+     expf  =`a*sin(C) = c*sin(A)`
+     cost=8
+
+    relation  7
+     flag = 1
+     Mf    ={a, A, R}
+     rf    =1
+     vf    ={}
+     expf  =`a = 2*R*sin(A)`
+     cost=6
+
+   relation  8
+     flag = 1
+     Mf    ={b, B, R}
+     rf    =1
+     vf    ={}
+     expf  =`b = 2*R*sin(B)`
+     cost=6
+
+   relation  9
+     flag = 1
+     Mf    ={c, C, R}
+     rf    =1
+     vf    ={}
+     expf  =`c = 2*R*sin(C)`
+     cost=6
+   relation  10
+     flag = 1
+     Mf    ={p, a, b, c}
+     rf    =1
+     vf    ={}
+     expf = `2*p = a+b+c`
+     cost=4
+   relation  11
+     flag  =1
+     Mf    ={S, a, ha}
+     rf    =1
+     vf    ={}
+     expf =` S = a*ha/2`
+     cost=4
+
+   relation  12
+     flag  =1
+     Mf    ={S, b, hb}
+     rf    =1
+     vf    ={}
+     expf  =`S = b*hb/2`
+     cost=4
+
+   relation  13
+     flag = 1
+     Mf   = {S, c, hc}
+     rf    =1
+     vf    ={}
+     expf  =`S = c*hc/2`
+     cost=4
+
+   relation  14
+     flag = 1
+     Mf    ={S, p, r}
+     rf    =1
+     vf    ={}
+     expf  =`S = p*r`
+     cost=2
+
+   relation  15
+     flag = 0
+     Mf   ={S, a, b, c, p}
+     rf    =1
+     vf    ={S}
+     expf  =`S = sqrt(p*(p-a)*(p-b)*(p-c))`
+     cost=12
+
+   relation  16
+     flag  =1
+     Mf    ={S, b, c, A}
+     rf    =1
+     vf    ={}
+     expf  =`S = b*c*sin(A)/2`
+     cost=8
+
+  relation  17
+     flag = 1
+     Mf    ={S, a, c, B}
+     rf    =1
+     vf   = {}
+     expf =` S = a*c*sin(B)/2`
+     cost=8
+
+  relation  18
+     flag = 1
+     Mf    ={S, a, b, C}
+     rf    =1
+     vf    ={}
+     expf =` S = a*b*sin(C)/2`
+     cost=8
+
+  relation  19
+     flag = 1
+     Mf    ={ha, b, C}
+     rf   = 1
+     vf   = {}
+     expf =` ha = b*sin(C)`
+     cost=4
+
+   relation  20
+     flag = 1
+     Mf    ={ha, c, B}
+     rf    =1
+     vf    ={}
+     expf =`ha = c*sin(B)`
+     cost=4
+
+  relation  21
+     flag = 1
+     Mf    ={hb, a, C}
+     rf    =1
+     vf    ={}
+     expf  =`hb = a*sin(C)`
+     cost=4
+
+   relation  22
+     flag = 1
+     Mf    ={hb, c, A}
+     rf    =1
+     vf   = {}
+     expf =` hb = c*sin(A)`
+     cost=4
+
+   relation  23
+     flag  =1
+     Mf    ={hc, a, B}
+     rf    =1
+     vf    ={}
+     expf=` hc = a*sin(B)`
+     cost=4
+
+  relation  24
+     flag  =1
+     Mf    ={hc, b, A}
+     rf    =1
+     vf    ={}
+     expf  =`hc = b*sin(A)`
+     cost=4
+
+  relation  25
+     flag = 1
+     Mf    ={S, a, b, c, p}
+     rf    =0
+     vf    ={S}
+     expf =`S=sqrt()`

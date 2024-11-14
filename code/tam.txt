@@ -1,0 +1,25 @@
+
+object= TAM
+   variables
+   x = "an 1";
+   y = "an 2";
+   z = "an 3";
+
+   endvariables
+
+   relation  0
+     flag = 1
+     Mf    ={x, y, z}
+     rf    =1
+     vf    ={}
+     expf =`  x+y+z = pi `
+     cost=2
+
+   relation  1
+     flag = 1
+     Mf    ={x, y, z}
+     rf    =1
+     vf    ={}
+     expf  =`  x-y-z=2`
+     cost=19
+

@@ -1,0 +1,206 @@
+{VERSION 4 0 "IBM INTEL NT" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "MangTinhToan := tabl
+e():" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 " " }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 1310 "MangTinhToan[ReadObjectw] := proc(filen
+ame::string)\nlocal nameobject, F, M, f, i, t, m, s, p, helpob;\n  s :
+= readline(filename);\n  M := [];\n  f := [];\n  i := 1;\n  F := [];\n
+  helpob := [];\n  if s = 0 then\n    print(\"file rong\")\n  else\n  \+
+  while s = \"\" do\n       s := readline(filename)\n    od;\n    name
+object := rhs(parse(s));\n    helpob := [op(helpob), s];\n    s := rea
+dline(filename);\n    while searchtext(\"variables\",s)=0  do\n      s
+ := readline(filename)\n    od;\n    s := readline(filename);\n    whi
+le searchtext(\"endvariables\",s) = 0 do\n      if s <> \"\" then\n   \+
+     M := [op(M), lhs(parse(s))];\n        helpob := [op(helpob), s]\n
+      fi;\n      s := readline(filename)\n    od;\n    s := readline(f
+ilename);\n    if M = [] then\n      ERROR(\"variables=[]\")\n    fi;
+\n    while s <> 0 do\n      if s <> \"\" then\n        if i < 7 then
+\n          if i <> 1 then\n            if i <> 5 then\n              \+
+f := [op(f), rhs(parse(s))]\n            else\n              f := [op(
+f), \{rhs(parse(s))[]\}]\n            fi\n          else\n            \+
+f := [op(f), s]\n          fi;\n          i := i+1\n        else\n    \+
+      i := 1;\n          f := [op(f), rhs(parse(s))];\n          F := \+
+[op(F),f];\n          f := []\n        fi\n      fi;\n      s := readl
+ine(filename)\n   od\n  fi;\n  RETURN([nameobject, M, F, helpob]);\nen
+d:# ReadObjectw" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 43 "MangTinhToan[Baodongw]:=proc(F::set,A::set)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 136 "  # F la tap hop cac quan he\n  # \+
+A la tap hop cac thuoc tinh hay cac phan tu\n local f,F1,result,A1,A2,
+ff;\nresult:=\{\};A1:=A;A2:=\{\};F1:=F;" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 17 " while A1<>A2 do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "   A2:
+=A1;ff:=\{\};" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "   for f in F1 do
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 122 "     if  (f[2]=0 and          \+
+       `minus`(`minus`(f[3],A1),f[5])=\{\}) or (f[2]=1 and nops(`minus
+`(f[3],A1))<=f[4] ) then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "       \+
+ A1:=`union`(A1,f[3]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "        f
+f:=`union`(ff,\{f\});" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "     fi;" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "   od;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "   F1:=`minus`(F1,ff);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 3 "od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "RETURN(A1);" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "MangT
+inhToan[ApQuanhe]:=\nproc(D::list,A::set)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 282 "  local Anew, i, f;\nAnew := A;\nfor i from 1 to nop
+s(D) do\n  f := D[i];\n  if ((f[2]=1 and nops(`minus`(f[3],Anew))<=f[4
+]) or\n      (f[2]=0 and `minus`(`minus`(f[3],Anew),f[5])=\{\}))\n    \+
+ and 0<nops(`minus`(f[3],Anew)) then\n    Anew := `union`(Anew,f[3]);
+\n  fi;\nod;\nRETURN (Anew);\nend:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "MangTinhToan[Solutionw]:=\np
+roc(filename::string,A1::set,B1::set)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 43 "  local F,f,Aold,sol_found,sol,A, i,j,D,D1;" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 32 "    F:=ReadObjectw(filename)[3];" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 12 "    sol:=[];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 
+"    Aold:=\{\};\n    A:=A1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "    if `minus`(B1,A1)=\{\} then" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "      sol_found:=true;" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 8 "    else" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+23 "      sol_found:=false;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    f
+i;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "    while (sol_found=false an
+d Aold<>A) do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 440 "      Aold:=A;\n
+      for i from 1 to nops(F) do\n        f := F[i];\n        if ((f[2
+]=1 and nops(`minus`(f[3],A))<=f[4]) or\n          (f[2]=0 and `minus`
+(`minus`(f[3],A),f[5])=\{\}))\n          and 0<nops(`minus`(f[3],A)) t
+hen\n          A := `union`(A,f[3]);\n          sol:=[op(sol),f];\n   \+
+       # F:=`minus`(F,\{f\});\n          break;\n        fi;\n      od
+; # for\n      if `minus`(B1,A)=\{\} then\n        sol_found := true\n
+      fi\n    od; # while" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 351 " if s
+ol_found then\n   # Loai bot cac quan he khong can thiet\n   D := sol;
+\n   for i from nops(sol) by -1 while i>0 do\n     f := sol[i];\n     \+
+for j from nops(D) by -1 while j>0 do\n       if D[j]=f then\n        \+
+ D1 := [op(D[1..(j-1)]),op(D[(j+1)..nops(D)])];\n       fi;\n     od;
+\n     if `minus`(B1,ApQuanhe(D1,A1))=\{\} then\n       D := D1;\n    \+
+ fi;\n   od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "   RETURN([true,D])
+;\n else\n    RETURN([false,[]]);\n fi;" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 6 " end:\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "MangTinhT
+oan[OpSolutionw] :=\nproc(filename::string,H::set,G::set)" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 2168 "local \n   F::list, #danh sach quan he doc
+ tu file\n   Alist::list, #danhsach cac tap thuoc tinh o cac dinh\n   \+
+Open::set, Close::set, found,\n   node, # so thu tu cua dinh, so do ha
+m g,\n         # so thu tu cua quan he,so thu tu dinh truoc\n   f, A, \+
+nodelist, k, sol,\n   GetMin,Xuly_next;\n\nGetMin := proc()\n  local n
+ode, minnode;\n  minnode := Open[1];\n  for node in Open do\n    if no
+de[2] < minnode[2] then\n      minnode := node;\n    fi;\n  od;\n  Ope
+n := `minus`(Open,\{minnode\});\n  RETURN(minnode);\nend: # GetMin\n\n
+Xuly_next := proc(node,f)\n  local node1, Aset, Bset,g, nAlist, i;\n  \+
+nAlist := nops(Alist);\n  Aset := Alist[node[1]];\n  Bset := ApQuanhe(
+[f],Aset);\n  node1 := [op(node)];\n  for i from 1 to nAlist do\n    i
+f Bset = Alist[i] then break;\n    fi;\n  od;\n  if i > nAlist then # \+
+dinh moi\n    g := node[2]+f[7];\n    Alist := [op(Alist),Bset];\n    \+
+node1 := [nAlist+1,g,f[1],node[1]];\n    Open := `union`(Open,\{node1
+\});\n  else\n    for node1 in Open do\n      if node1[1]=i then\n    \+
+    if node[2]+f[7] < node1[2] then\n          Open := `minus`(Open,\{
+node1\});\n          node1 := [i,node[2]+f[7],f[1],node[1]];\n        \+
+  Open := `union`(Open,\{node1\});\n        fi;\n        break;\n     \+
+ fi;\n    od;    \n  fi;\nend: # Xuly_next\n\nF := ReadObjectw(filenam
+e)[3];\nAlist := [H];\n# Buoc 1:\nnode := [1,0,-1,-1];\nOpen := \{node
+\};  Close := \{\};  found := false;\n# Buoc 2:\nwhile (Open <> \{\}) \+
+do\n  node := GetMin(); # lay ra dinh nho nhat trong Open\n  Close := \+
+`union`(Close,\{node\});\n  if `minus`(G,Alist[node[1]]) = \{\} then #
+ node is goal\n    found := true;\n    break;\n  fi;\n  for f in F do
+\n    A := Alist[node[1]];\n    if ApQuanhe([f],A) <> A then\n      Xu
+ly_next(node,f);\n    fi;\n  od; # for\nod; # while\n# Buoc 3: Ket lua
+n\nif found = true then\n  nodelist := [node]; \n  while node[1] <> 1 \+
+do\n    k:=node[4];\n    for node in Close do\n      if node[1] = k th
+en\n        nodelist := [node,op(nodelist)];\n        break;\n      fi
+;\n    od; # for\n  od; # while\n  sol := [];\n  for k from 2 to nops(
+nodelist) do\n    node := nodelist[k];\n    for f in F do\n      if f[
+1]=node[3] then  sol := [op(sol),f];\n      fi;\n    od;\n  od;\n  RET
+URN([true,sol]);\nelse\n  RETURN([false,[]]);\nfi;\nend: # OpSolutionw
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "\n" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 634 "MangTinhToan[EvalSolw] :=\nproc(F::list,H::s
+et,G::set)\nlocal Aold, Anew, setlist, f,\n      result, i, bien, expr
+, rhs_expr;\nAold := H;  setlist := [Aold];\nfor f in F do\n  Anew := \+
+ApQuanhe([f],Aold);\n  setlist := [op(setlist),Anew];\n  Aold := Anew;
+\nod;\nf:=F[nops(F)];  result := solve(parse(f[6]),G);\nfor i from nop
+s(F)-1 by -1 while i>0 do\n  f := F[i]; bien:=`minus`(setlist[i+1],set
+list[i]);\n  for expr in result do\n    result := `minus`(result,\{exp
+r\});\n    rhs_expr := subs(solve(parse(f[6]),bien),rhs(expr));\n    e
+xpr := lhs(expr)=rhs_expr;\n    result := `union`(result,\{expr\});\n \+
+ od;\nod;\nRETURN(simplify(result));\nend: # EvalSolw\n\n" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 1963 "MangTinhToan[Basew] := proc(F)\n#
+ Gia su cac quan he trong F co rank = 1\nlocal A1, F1, S, f,f1,uf,vf, \+
+x,Atmp,\n    After;\nAfter := proc(vf::set) # xet tren (A1,F1)\n  loca
+l f1,A,Aold;\n  A := vf;  Aold := \{\};\n  while A <> Aold do\n    Aol
+d := A;\n    for f1 in F1 do  \n      if `intersect`(`minus`(f1[3],f1[
+5]),A) <> \{\}\n      then  A := `union`(A,f1[5]);\n      fi;\n    od;
+\n  od; # while\n  RETURN(A);\nend: # After\n\n# Buoc 1:\nA1 := \{\}; \+
+ F1 := \{\};  S := \{\};\n# Buoc 2:\nfor f in F  do\n  # Xu ly truong \+
+hop 1 cua f\n  if `minus`(f[3],A1) = \{\} then\n    if (f[2]=1 and `in
+tersect`(f[3],S)<>\{\}) or\n       (f[2]=0 and `minus`(f[5],S)=\{\}) t
+hen\n      if f[2]=1 then Atmp := `intersect`(f[3],S);\n      else Atm
+p := f[5];\n      fi;\n      for x in Atmp do\n        if `intersect`(
+`minus`(f[3],\{x\}),After(\{x\}))=\{\}\n          then\n          S:=`
+minus`(S,\{x\}); f[5]:=\{x\}; f[2]:=0;\n          F1:=`union`(F1,\{f\}
+);\n          break;\n        fi\n      od;\n    fi;\n  fi;\n  # Xu ly
+ truong hop 2 cua f\n  if `minus`(f[3],A1) <> \{\} then\n    if f[2]=1
+ or `minus`(f[5],A1)<>\{\} then\n      vf := \{`minus`(f[3],A1)[1]\}; \+
+ \n      uf := `minus`(f[3],vf);\n      S := `union`(S,`minus`(uf,A1))
+;\n      A1 := `union`(A1,f[3]);\n      f[2]:=0; f[5]:=vf;\n      F1 :
+= `union`(F1,\{f\});\n    else\n      vf := f[5]; uf := `minus`(f[3],v
+f);\n      # Loai quan he trong F1 suy ra vf\n      for f1 in F1 do\n \+
+       if f1[5] = vf then\n          F1 := `minus`(F1,\{f1\}); break;
+\n        fi;\n      od;\n      # Loai mot so quan he trong F1 de bao \+
+dam tinh phan\n      # cap va cap nhat level cua cac phan tu\n      At
+mp := `minus`(uf,A1);\n      for x in `intersect`(uf,A1,After(vf)) do
+\n        for f1 in F1 do\n          if f1[5]=\{x\} then\n            \+
+Atmp := `union`(Atmp,\{x\});\n            F1 := `minus`(F1,\{f1\});\n \+
+           break;\n          fi;\n        od;\n      od; # for x\n    \+
+  S := `minus`(`union`(S,Atmp),vf);\n      A1 := `union`(A1,f[3]);\n  \+
+    F1 := `union`(F1,\{f\});\n    fi;\n  fi;\nod; # for f\nRETURN([S,A
+1,F1]);\nend: # Basew\n\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+592 "MangTinhToan[Completionw] := proc(F,H::set,G::set)\nlocal Aset, F
+set, BaoH, G1, H1,\n      f, ans, k;\n  Fset := convert(F,set);\n  Ase
+t := \{\};\n  for f in Fset do\n    Aset := `union`(Aset,f[3]);\n  od;
+\n  Aset := `minus`(Aset,`union`(G,Baodongw(Fset,H)));\n  ans := false
+;  k := 0;\n  while (ans = false) and k <= nops(Aset) do\n    for H1 i
+n combinat[choose](Aset,k) do\n      BaoH := Baodongw(Fset,`union`(H,H
+1));\n      if `minus`(G,BaoH) = \{\} then\n        ans := true;\n    \+
+    break;\n      fi;\n    od;\n    if ans <> true then  k := k+1;\n  \+
+  fi;\n  od; # while\n  RETURN([ans,H1]);\nend: # Completionw\n\n" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2464 "MangTinhToan[Completionw1]
+ := proc(F,H::set,G::set)\n# Gia su cac quan he trong F co rank = 1\nl
+ocal A1, F1, S, f,f1,uf,vf, x,Atmp,Atmp1, G1,\n    After;\nAfter := pr
+oc(vf::set) # xet tren (A1,F1)\n  local f1,A,Aold;\n  A := vf;  Aold :
+= \{\};\n  while A <> Aold do\n    Aold := A;\n    for f1 in F1 do  \n
+      if `intersect`(`minus`(f1[3],f1[5]),A) <> \{\}\n      then  A :=
+ `union`(A,f1[5]);\n      fi;\n    od;\n  od; # while\n  RETURN(A);\ne
+nd: # After\n\n\n# Buoc 1:\nG1 := `minus`(G,H);\nA1 := H;  F1 := \{\};
+  S := H;\n# Buoc 2:\nfor f in F  do\n  # Xu ly truong hop 1 cua f\n  \+
+if `minus`(f[3],A1) = \{\} then\n    if (f[2]=1 and `intersect`(f[3],S
+)<>\{\}) or\n       (f[2]=0 and `minus`(f[5],S)=\{\}) then\n      if f
+[2]=1 then Atmp := `intersect`(f[3],S);\n      else Atmp := f[5];\n   \+
+   fi;\n      Atmp1 := \{\};\n      for x in Atmp do\n        if `inte
+rsect`(`minus`(f[3],\{x\}),After(\{x\}))=\{\}\n          then  Atmp1 :
+= `union`(Atmp1,\{x\});\n        fi\n      od;\n      if Atmp1 <> \{\}
+ then\n        if `intersect`(Atmp1,G) <> \{\} then\n          vf := \+
+\{`intersect`(Atmp1,G)[1]\};\n        elif `minus`(Atmp1,H) <> \{\} th
+en\n          vf := \{`minus`(Atmp1,H)[1]\};\n        else vf := \{\};
+\n        fi;\n        if vf <> \{\} then \n          S:=`minus`(S,vf)
+; f[5]:=vf; f[2]:=0;\n          F1:=`union`(F1,\{f\});\n        fi;\n \+
+     fi;\n    fi;\n  fi; # end truong hop 1\n  # Xu ly truong hop 2 cu
+a f\n  if `minus`(f[3],A1) <> \{\} then\n    if f[2]=1 or `minus`(f[5]
+,A1)<>\{\} then\n      vf := \{`minus`(f[3],A1)[1]\};\n      if `minus
+`(vf,H) <> \{\} then  \n        uf := `minus`(f[3],vf);\n        S := \+
+`union`(S,`minus`(uf,A1));\n        A1 := `union`(A1,f[3]);\n        f
+[2]:=0; f[5]:=vf;\n        F1 := `union`(F1,\{f\});\n      fi;\n    el
+if `minus`(f[5],H)<>\{\} then\n      vf := f[5]; uf := `minus`(f[3],vf
+);\n      # Loai quan he trong F1 suy ra vf\n      for f1 in F1 do\n  \+
+      if f1[5] = vf then\n          F1 := `minus`(F1,\{f1\}); break;\n
+        fi;\n      od;\n      # Loai mot so quan he trong F1 de bao da
+m tinh phan\n      # cap va cap nhat level cua cac phan tu\n      Atmp
+ := `minus`(uf,A1);\n      for x in `intersect`(uf,A1,After(vf)) do\n \+
+       for f1 in F1 do\n          if f1[5]=\{x\} then\n            Atm
+p := `union`(Atmp,\{x\});\n            F1 := `minus`(F1,\{f1\});\n    \+
+        break;\n          fi;\n        od;\n      od; # for x\n      S
+ := `minus`(`union`(S,Atmp),vf);\n      A1 := `union`(A1,f[3]);\n     \+
+ F1 := `union`(F1,\{f\});\n    fi;\n  fi;\n  # Cap nhat G1\n  G1 := `m
+inus`(G1,A1);\nod; # for f\n\nRETURN([S,A1,F1]);\nend: # Completionw1
+\n\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "save(MangTinhToan,
+\"C:/Mang_Tinh_Toan/MangTinhToan.m\");" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}}{MARK "19 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

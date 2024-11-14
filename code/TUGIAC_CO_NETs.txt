@@ -1,0 +1,43 @@
+object= TU_GIAC_CO_NETS
+    object
+        O1 : TuGiac[A, B, C, D]
+        O2 : TamGiac[A, B, D]
+        O3 : TamGiac[C, B, D]
+        O4 : TamGiac[B, A, C]
+        O5 : TamGiac[D, A, C]
+    end_object
+
+    relation  f1
+         flag  = 1
+         Mf    = {O2.a, O1.BD}
+         rf    = 1
+         vf    = {}
+         expf  =` O2.a = O1.BD `
+
+
+    f2 :    O2.b = O1.d
+    f3 :    O2.c = O1.a
+    f4 :    O2. = O1.A
+
+    f5 :    O3.a = O1.BD
+    f6 :    O3.b = O1.c
+    f7 :    O3.c = O1.b
+    f8 :    O3. = O1.C
+
+    f9 :    O4.a = O1.AC
+    f10 :   O4.b = O1.b
+    f11 :   O4.c = O1.a
+    f12 :   O4. = O1.B
+
+    f13 :   O5.a = O1.AC
+    f14 :   O5.b = O1.c
+    f15 :   O5.c = O1.d
+    f16 :   O5. = O1.D
+
+    f17 :   O1.A = O4. + O5.
+    f18 :   O1.B = O2. + O3.
+    f19 :   O1.C = O4. + O5.
+    f20 :   O1.D = O2. + O3.
+
+    f21 :   O1.S = O2.S + O3.S
+    f22 :   O1.S = O4.S + O5.S

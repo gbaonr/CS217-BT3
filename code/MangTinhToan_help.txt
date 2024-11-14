@@ -1,0 +1,95 @@
+Cac thu tuc trong package "MangTinhToan":
+
+
+1. ReadObjectw(filename)
+      filename la ten cua file chua thong tin ve mot object va co phan ten chinh cung chinh la 
+      ten cua object.
+
+      RETURN:  danh sach gom
+        [1] ten cua object
+        [2] danh sach cac <name>, moi <name> la ten mot thuoc tinh cua object
+        [3] danh sach cac quan he, moi quan he la mot danh sach gom
+              3.1: chuoi co dang " relation <number>"
+              3.2: 1 (nghia la doi xung)  hoac 0 (nghia la khong doi xung)
+              3.3: tap hop cac <name> co trong quan he
+              3.4: hang (rank) cua quan he
+              3.5: tap hop cac <name> duoc suy ra trong quan he (tap hop nay la {} khi quan he
+                     la rong khi doi xung).
+              3.6: mot cong thuc lien he giua cac phan tu (hay cac <name>)
+              3.7: trong so cua quan he
+       [4] danh sach cac <string> cho su tra cuu ve ten object va cac ten cua cac thuoc tinh.
+
+2.  Baodongw(F::set,A::set)
+     F la tap hop cac quan he, nhu thanh phan [3] (convert sang kieu set) 
+     trong danh sach duoc RETURN boi ReadObjectw.
+     A la mot tap hop cac phan tu (hay cac <name>) can duoc tinh bao dong.
+
+     RETURN:  Tap hop gom cac phan tu (hay cac <name>) suy duoc tu A, tuc la bao dong cua A.
+
+3. ApQuanhe(D::list,A::set)
+     D  la danh sach cac quan he.
+     A  la mot tap hop cac phan tu.
+
+   RETURN: tap hop cac thuoc tinh duoc suy tu A (ke ca A) do lan luot ap
+   dung cac quan he trong D.  
+
+4. Solutionw(filename::string,A1::set,B1::set)
+     filename  la ten file chua mot object.
+     A1  la mot tap hop cac thuoc tinh (hay cac <name>) cua object.
+     B1  la mot tap hop cac thuoc tinh (hay cac <name>) cua object 
+         can tinh hay suy ra tu A1.
+
+     RETURN:  danh sach gom
+       [1] true (nghia la giai duoc)  hoac  false (nghia la khong giai duoc).
+       [2] loi giai (neu co), tuc la danh sach cac quan he ap dung duoc de
+            suy ra B1 tu A1.
+
+5. OpSolutionw(filename::string, H::set, G::set)
+     filename  la ten file chua mot object.
+     H  la mot tap hop cac thuoc tinh (hay cac <name>) cua object.
+     G  la mot tap hop cac thuoc tinh (hay cac <name>) cua object 
+        can tinh hay suy ra tu H.
+
+     RETURN:  danh sach gom
+       [1] true (nghia la giai duoc)  hoac  false (nghia la khong giai duoc).
+       [2] loi giai toi uu (neu co), tuc la danh sach cac quan he ap dung 
+           duoc de suy ra G tu H.
+
+6. EvalSolw(F::list, H::set, G::set)
+   F  la danh sach cac quan he.
+   H  la tap cac phan tu, phan gia thiet cua bai toan.
+   G  la tap cac phan tu, phan muc tieu cua bai toan, duoc suy ra 
+      tu H nho vao danh sach F (xem la loi giai cua bai toan H->G).
+
+   RETURN:  tap hop cac bieu thuc co dang:
+     <bien thuoc G> = cong thuc theo cac <bien thuoc H>
+
+7. Basew(F)
+   F la tap hop hay danh sach cac quan he.
+     dieu kien: cac quan he thuoc F deu co rank = 1.
+
+   RETURN: mot tap hop sinh cua mang (A,F) voi A la tap hop tat ca cac
+           thuoc tinh trong cac quan he.
+   * Phuong phap: xay dung bieu do phan cap (A1,F1).
+  
+8. Completionw(F,H,G)
+   F la tap hop hay danh sach cac quan he.
+   H la tap hop (phan gia thiet).
+   G la tap hop (phan muc tieu).
+
+   RETURN: danh sach co dang [ans::boolean,H1::set] voi
+       ans = true khi bo sung gia thiet duoc, va tap bo sung la H1;
+       ans = false khi khong the bo sung gia thiet duoc.
+
+   * Phuong phap: thu cac phep bo sung tu it cho toi nhieu phan tu.
+
+9. Completionw1(F,H,G)
+   F la tap hop hay danh sach cac quan he.
+   H la tap hop (phan gia thiet).
+   G la tap hop (phan muc tieu).
+
+   RETURN: danh sach co dang [tap sinh,bieu do phan cap] voi
+       bieu do phan cap  =  tap thuoc tinh, cac quan he
+
+   * Phuong phap: Duyet cac quan he va xay dung bieu do phan cap.
+

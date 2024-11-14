@@ -1,0 +1,118 @@
+{VERSION 4 0 "IBM INTEL NT" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "with(MangTinhToan);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&%)ApQuanheG%)BaodongwG%,ReadObje
+ctwG%*SolutionwG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "ReadObj
+ectw(\"TAM_GIAC.txt\");" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#7&%)TAM_GIA
+CG78%\"aG%\"bG%\"cG%\"AG%\"BG%\"CG%#haG%#hbG%#hcG%#maG%#mbG%#mcG%#paG%
+#pbG%#pcG%\"SG%\"pG%\"RG%\"rG%#raG%#rbG%#rcG7;7)Q/~~~relation~~06\"\"
+\"\"<%F)F*F+F@<\"%.~~A+B+C~=~pi~G\"\"#7)Q/~~~relation~~1F?\"\"!<&F)F&F
+'F(F@<#F&%A~~a^2~=~b^2~+~c^2~-~2*b*c*cos(A)G\"#>7)Q/~~~relation~~2F?FG
+<&F*F&F'F(F@<#F'%A(b^2~=~a^2~+~c^2~-~2*a*c*cos(B))GFK7)Q/~~~relation~~
+3F?FG<&F&F'F+F(F@<#F(%?c^2~=~a^2~+~b^2~-~2*a*b*cos(C)GFK7)Q/~~~relatio
+n~~4F?F@<&F)F*F&F'F@FB%5a*sin(B)~=~b*sin(A)~G\"\")7)Q.~~relation~~5F?F
+@<&F*F'F+F(F@FB%4b*sin(C)~=~c*sin(B)GFZ7)Q/~~~relation~~6F?F@<&F)F&F+F
+(F@FB%4a*sin(C)~=~c*sin(A)GFZ7)Q0~~~~relation~~7F?F@<%F)F&F7F@FB%/a~=~
+2*R*sin(A)G\"\"'7)Q/~~~relation~~8F?F@<%F*F'F7F@FB%/b~=~2*R*sin(B)GFao
+7)Q/~~~relation~~9F?F@<%F+F(F7F@FB%/c~=~2*R*sin(C)GFao7)Q0~~~relation~
+~10F?F@<&F6F&F'F(F@FB%,2*p~=~a+b+cG\"\"%7)Q0~~~relation~~11F?F@<%F&F,F
+5F@FB%,~S~=~a*ha/2GF^p7)Q0~~~relation~~12F?F@<%F'F-F5F@FB%+S~=~b*hb/2G
+F^p7)Q0~~~relation~~13F?F@<%F(F.F5F@FB%+S~=~c*hc/2GF^p7)Q0~~~relation~
+~14F?F@<%F6F5F8F@FB%(S~=~p*rGFD7)Q0~~~relation~~15F?FG<'F6F&F'F(F5F@<#
+F5%>S~=~sqrt(p*(p-a)*(p-b)*(p-c))G\"#77)Q0~~~relation~~16F?F@<&F)F'F(F
+5F@FB%1S~=~b*c*sin(A)/2GFZ7)Q/~~relation~~17F?F@<&F*F&F(F5F@FB%2~S~=~a
+*c*sin(B)/2GFZ7)Q/~~relation~~18F?F@<&F&F'F+F5F@FB%2~S~=~a*b*sin(C)/2G
+FZ7)Q/~~relation~~19F?F@<%F'F+F,F@FB%/~ha~=~b*sin(C)GF^p7)Q0~~~relatio
+n~~20F?F@<%F*F(F,F@FB%.ha~=~c*sin(B)GF^p7)Q/~~relation~~21F?F@<%F&F+F-
+F@FB%.hb~=~a*sin(C)GF^p7)Q0~~~relation~~22F?F@<%F)F(F-F@FB%/~hb~=~c*si
+n(A)GF^p7)Q0~~~relation~~23F?F@<%F*F&F.F@FB%/~hc~=~a*sin(B)GF^p7)Q/~~r
+elation~~24F?F@<%F)F'F.F@FB%.hc~=~b*sin(A)GF^p79Q1object=~TAM_GIACF?QG
+~~~~~~a~=~doan;~#~\"~c|funh~c|\\za~tam~gi|euc\"F?Q>~~~~~~b~~=\"c|funh~
+c|\\za~tam~gi|euc\"F?Q>~~~~~~c~=~\"c|funh~c|\\za~tam~gi|euc\"F?QD~~~~~
+~A~=~goc;~#~\"g|^yc~c|\\za~tam~gi|euc\"F?Q=~~~~~~B~~=\"g|^yc~c|\\za~ta
+m~gi|euc\"F?Q=~~~~~~C~~=\"g|^yc~c|\\za~tam~gi|euc\"F?QU~~~~~~ha~~=\"|a
+u|`u|eyng~cao~|czng~v|hyi~c|funh~a~trong~tam~gi|euc\"F?QU~~~~~~hb~~=\"
+|au|`u|eyng~cao~|czng~v|hyi~c|funh~b~trong~tam~gi|euc\"F?QU~~~~~~hc~~=
+\"|au|`u|eyng~cao~|czng~v|hyi~c|funh~c~trong~tam~gi|euc\"F?Qgn~~~~~~ma
+~=~\"|au|`u|eyng~trung~tuy|`xn~|czng~v|hyi~c|funh~a~trong~tam~gi|euc\"
+F?Qgn~~~~~~mb~~=\"|au|`u|eyng~trung~tuy|`xn~|czng~v|hyi~c|funh~b~trong
+~tam~gi|euc\"F?Qgn~~~~~~mc~=~\"|au|`u|eyng~trung~tuy|`xn~|czng~v|hyi~c
+|funh~c~trong~tam~gi|euc\"F?QR~~~~~~pa~~=\"|au|`u|eyng~ph|\\un~gi|euc~
+g|^yc~A~trong~tam~gi|euc\"F?QR~~~~~~pb~=~\"|au|`u|eyng~ph|\\un~gi|euc~
+g|^yc~B~trong~tam~gi|euc\"F?QR~~~~~~pc~~=\"|au|`u|eyng~ph|\\un~gi|euc~
+g|^yc~C~trong~tam~gi|euc\"F?Q?~~~~~~S~~=\"di|axn~t|hxch~tam~gi|euc\"F?
+QD~~~~~~p~=\"~n|aza~chu~vi~c|\\za~tam~gi|euc\"F?QT~~~~~~R~=~\"b|eun~k|
+hxnh~|au|`u|eyng~tr|jxn~ngo|fui~ti|`xp~tam~gi|euc\"F?QR~~~~~~r~~=\"b|e
+un~k|hxnh~|au|`u|eyng~tr|jxn~n|dyi~ti|`xp~tam~gi|euc\"F?Qao~~~~~~ra~=~
+\"b|eun~k|hxnh~|au|`u|eyng~tr|jxn~b|bung~ti|`xp~|czng~v|hyi~c|funh~a~(
+hay~g|^yc~A).\"F?Qao~~~~~~rb~~=\"b|eun~k|hxnh~|au|`u|eyng~tr|jxn~b|bun
+g~ti|`xp~|czng~v|hyi~c|funh~b~(hay~g|^yc~B).\"F?Qao~~~~~~rc~~=\"b|eun~
+k|hxnh~|au|`u|eyng~tr|jxn~b|bung~ti|`xp~|czng~v|hyi~c|funh~c~(hay~g|^y
+c~C).\"F?" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "F:=ReadObjectw
+(\"TAM_GIAC.txt\")[3];" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%\"FG7;7)Q/
+~~~relation~~06\"\"\"\"<%%\"AG%\"BG%\"CGF)<\"%.~~A+B+C~=~pi~G\"\"#7)Q/
+~~~relation~~1F(\"\"!<&F+%\"aG%\"bG%\"cGF)<#F5%A~~a^2~=~b^2~+~c^2~-~2*
+b*c*cos(A)G\"#>7)Q/~~~relation~~2F(F3<&F,F5F6F7F)<#F6%A(b^2~=~a^2~+~c^
+2~-~2*a*c*cos(B))GF:7)Q/~~~relation~~3F(F3<&F5F6F-F7F)<#F7%?c^2~=~a^2~
++~b^2~-~2*a*b*cos(C)GF:7)Q/~~~relation~~4F(F)<&F+F,F5F6F)F.%5a*sin(B)~
+=~b*sin(A)~G\"\")7)Q.~~relation~~5F(F)<&F,F6F-F7F)F.%4b*sin(C)~=~c*sin
+(B)GFI7)Q/~~~relation~~6F(F)<&F+F5F-F7F)F.%4a*sin(C)~=~c*sin(A)GFI7)Q0
+~~~~relation~~7F(F)<%F+F5%\"RGF)F.%/a~=~2*R*sin(A)G\"\"'7)Q/~~~relatio
+n~~8F(F)<%F,F6FUF)F.%/b~=~2*R*sin(B)GFW7)Q/~~~relation~~9F(F)<%F-F7FUF
+)F.%/c~=~2*R*sin(C)GFW7)Q0~~~relation~~10F(F)<&%\"pGF5F6F7F)F.%,2*p~=~
+a+b+cG\"\"%7)Q0~~~relation~~11F(F)<%F5%#haG%\"SGF)F.%,~S~=~a*ha/2GF_o7
+)Q0~~~relation~~12F(F)<%F6%#hbGFdoF)F.%+S~=~b*hb/2GF_o7)Q0~~~relation~
+~13F(F)<%F7%#hcGFdoF)F.%+S~=~c*hc/2GF_o7)Q0~~~relation~~14F(F)<%F]oFdo
+%\"rGF)F.%(S~=~p*rGF07)Q0~~~relation~~15F(F3<'F]oF5F6F7FdoF)<#Fdo%>S~=
+~sqrt(p*(p-a)*(p-b)*(p-c))G\"#77)Q0~~~relation~~16F(F)<&F+F6F7FdoF)F.%
+1S~=~b*c*sin(A)/2GFI7)Q/~~relation~~17F(F)<&F,F5F7FdoF)F.%2~S~=~a*c*si
+n(B)/2GFI7)Q/~~relation~~18F(F)<&F5F6F-FdoF)F.%2~S~=~a*b*sin(C)/2GFI7)
+Q/~~relation~~19F(F)<%F6F-FcoF)F.%/~ha~=~b*sin(C)GF_o7)Q0~~~relation~~
+20F(F)<%F,F7FcoF)F.%.ha~=~c*sin(B)GF_o7)Q/~~relation~~21F(F)<%F5F-FioF
+)F.%.hb~=~a*sin(C)GF_o7)Q0~~~relation~~22F(F)<%F+F7FioF)F.%/~hb~=~c*si
+n(A)GF_o7)Q0~~~relation~~23F(F)<%F,F5F^pF)F.%/~hc~=~a*sin(B)GF_o7)Q/~~
+relation~~24F(F)<%F+F6F^pF)F.%.hc~=~b*sin(A)GF_o" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 33 "Baodongw(convert(F,set),\{A,B,a\});" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#</%\"AG%\"pG%\"BG%\"aG%\"bG%\"CG%\"cG%#haG%#
+hbG%#hcG%\"SG%\"RG%\"rG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "
+Baodongw(convert(F,set),\{A,B\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#<
+%%\"AG%\"BG%\"CG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "Solutio
+nw(\"TAM_GIAC.txt\",\{A,B\},\{C\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#7$%%trueG7#7)Q/~~~relation~~06\"\"\"\"<%%\"AG%\"BG%\"CGF)<\"%.~~A+B+C
+~=~pi~G\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "Solutionw(
+\"TAM_GIAC.txt\",\{A,B\},\{S\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$
+%&falseG7\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "Solutionw(\"
+TAM_GIAC.txt\",\{A,B,a\},\{S\});" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#7$
+%%trueG7'7)Q/~~~relation~~06\"\"\"\"<%%\"AG%\"BG%\"CGF)<\"%.~~A+B+C~=~
+pi~G\"\"#7)Q/~~~relation~~4F(F)<&F+F,%\"aG%\"bGF)F.%5a*sin(B)~=~b*sin(
+A)~G\"\")7)Q/~~~relation~~3F(\"\"!<&F4F5F-%\"cGF)<#F<%?c^2~=~a^2~+~b^2
+~-~2*a*b*cos(C)G\"#>7)Q0~~~relation~~10F(F)<&%\"pGF4F5F<F)F.%,2*p~=~a+
+b+cG\"\"%7)Q0~~~relation~~15F(F:<'FCF4F5F<%\"SGF)<#FI%>S~=~sqrt(p*(p-a
+)*(p-b)*(p-c))G\"#7" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "Solu
+tionw(\"TAM_GIAC.txt\",\{A,b,hc\},\{S\});" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7$%&falseG7\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 39 "Solutionw(\"TAM_GIAC.txt\",\{A,b,ha\},\{S\});" }}{PARA 12 "" 1 "
+" {XPPMATH 20 "6#7$%%trueG7&7)Q/~~relation~~196\"\"\"\"<%%\"bG%\"CG%#h
+aGF)<\"%/~ha~=~b*sin(C)G\"\"%7)Q/~~~relation~~0F(F)<%%\"AG%\"BGF,F)F.%
+.~~A+B+C~=~pi~G\"\"#7)Q/~~~relation~~4F(F)<&F4F5%\"aGF+F)F.%5a*sin(B)~
+=~b*sin(A)~G\"\")7)Q0~~~relation~~11F(F)<%F;F-%\"SGF)F.%,~S~=~a*ha/2GF
+0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "Solutionw(\"TAM_GIAC.t
+xt\",\{A,b,ha\},\{S,p\});" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#7$%%trueG
+7(7)Q/~~relation~~196\"\"\"\"<%%\"bG%\"CG%#haGF)<\"%/~ha~=~b*sin(C)G\"
+\"%7)Q/~~~relation~~0F(F)<%%\"AG%\"BGF,F)F.%.~~A+B+C~=~pi~G\"\"#7)Q/~~
+~relation~~4F(F)<&F4F5%\"aGF+F)F.%5a*sin(B)~=~b*sin(A)~G\"\")7)Q/~~~re
+lation~~3F(\"\"!<&F;F+F,%\"cGF)<#FB%?c^2~=~a^2~+~b^2~-~2*a*b*cos(C)G\"
+#>7)Q0~~~relation~~10F(F)<&%\"pGF;F+FBF)F.%,2*p~=~a+b+cGF07)Q0~~~relat
+ion~~11F(F)<%F;F-%\"SGF)F.%,~S~=~a*ha/2GF0" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 41 "Solutionw(\"TAM_GIAC.txt\",\{A,b,p\},\{S,ha\});" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7$%&falseG7\"" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "12 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 
+1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

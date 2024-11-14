@@ -1,0 +1,114 @@
+{VERSION 4 0 "IBM INTEL NT" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "with(MangTinhToan);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7)%)ApQuanheG%)BaodongwG%&BasewG%)
+EvalSolwG%,OpSolutionwG%,ReadObjectwG%*SolutionwG" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 113 "Alist:=ReadObjectw(\"C:/Mang_Tinh_Toan/TAM_
+GIAC.txt\")[2];\nFlist:=ReadObjectw(\"C:/Mang_Tinh_Toan/TAM_GIAC.txt\"
+)[3];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&AlistG78%\"aG%\"bG%\"cG%\"
+AG%\"BG%\"CG%#haG%#hbG%#hcG%#maG%#mbG%#mcG%#paG%#pbG%#pcG%\"SG%\"pG%\"
+RG%\"rG%#raG%#rbG%#rcG" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%&FlistG7;7
+)Q/~~~relation~~06\"\"\"\"<%%\"CG%\"AG%\"BGF)<\"%.~~A+B+C~=~Pi~G\"\"#7
+)Q/~~~relation~~1F(\"\"!<&%\"aG%\"bGF,%\"cGF)<#F5%A~~a^2~=~b^2~+~c^2~-
+~2*b*c*cos(A)G\"#>7)Q/~~~relation~~2F(F3<&F5F6F7F-F)<#F6%A(b^2~=~a^2~+
+~c^2~-~2*a*c*cos(B))GF:7)Q/~~~relation~~3F(F3<&F5F6F+F7F)<#F7%?c^2~=~a
+^2~+~b^2~-~2*a*b*cos(C)GF:7)Q/~~~relation~~4F(F)<&F5F6F,F-F)F.%5a*sin(
+B)~=~b*sin(A)~G\"\")7)Q.~~relation~~5F(F)<&F6F+F7F-F)F.%4b*sin(C)~=~c*
+sin(B)GFI7)Q/~~~relation~~6F(F)<&F5F+F,F7F)F.%4a*sin(C)~=~c*sin(A)GFI7
+)Q0~~~~relation~~7F(F)<%F5%\"RGF,F)F.%/a~=~2*R*sin(A)G\"\"'7)Q/~~~rela
+tion~~8F(F)<%F6FUF-F)F.%/b~=~2*R*sin(B)GFW7)Q/~~~relation~~9F(F)<%FUF+
+F7F)F.%/c~=~2*R*sin(C)GFW7)Q0~~~relation~~10F(F)<&F5F6%\"pGF7F)F.%,2*p
+~=~a+b+cG\"\"%7)Q0~~~relation~~11F(F)<%F5%\"SG%#haGF)F.%,~S~=~a*ha/2GF
+_o7)Q0~~~relation~~12F(F)<%F6Fco%#hbGF)F.%+S~=~b*hb/2GF_o7)Q0~~~relati
+on~~13F(F)<%FcoF7%#hcGF)F.%+S~=~c*hc/2GF_o7)Q0~~~relation~~14F(F)<%Fco
+F]o%\"rGF)F.%(S~=~p*rGF07)Q0~~~relation~~15F(F3<'F5F6FcoF]oF7F)<#Fco%>
+S~=~sqrt(p*(p-a)*(p-b)*(p-c))G\"#77)Q0~~~relation~~16F(F)<&F6FcoF,F7F)
+F.%1S~=~b*c*sin(A)/2GFI7)Q/~~relation~~17F(F)<&F5FcoF7F-F)F.%2~S~=~a*c
+*sin(B)/2GFI7)Q/~~relation~~18F(F)<&F5F6F+FcoF)F.%2~S~=~a*b*sin(C)/2GF
+I7)Q/~~relation~~19F(F)<%F6F+FdoF)F.%/~ha~=~b*sin(C)GF_o7)Q0~~~relatio
+n~~20F(F)<%F7F-FdoF)F.%.ha~=~c*sin(B)GF_o7)Q/~~relation~~21F(F)<%F5F+F
+ioF)F.%.hb~=~a*sin(C)GF_o7)Q0~~~relation~~22F(F)<%F,F7FioF)F.%/~hb~=~c
+*sin(A)GF_o7)Q0~~~relation~~23F(F)<%F5F-F^pF)F.%/~hc~=~a*sin(B)GF_o7)Q
+/~~relation~~24F(F)<%F6F,F^pF)F.%.hc~=~b*sin(A)GF_o" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 13 "Basew(Flist);" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#7%<%%\"bG%\"AG%\"cG</%\"aGF%%\"RG%\"CG%\"SGF&%\"pGF'%\"
+BG%#haG%#hbG%#hcG%\"rG<,7)Q/~~~relation~~16\"\"\"!<&F)F%F&F'\"\"\"<#F)
+%A~~a^2~=~b^2~+~c^2~-~2*b*c*cos(A)G\"#>7)Q/~~~relation~~0F6F7<%F+F&F.F
+9<#F+%.~~A+B+C~=~Pi~G\"\"#7)Q/~~~relation~~4F6F7<&F)F%F&F.F9<#F.%5a*si
+n(B)~=~b*sin(A)~G\"\")7)Q0~~~~relation~~7F6F7<%F)F*F&F9<#F*%/a~=~2*R*s
+in(A)G\"\"'7)Q0~~~relation~~10F6F7<&F)F%F-F'F9<#F-%,2*p~=~a+b+cG\"\"%7
+)Q0~~~relation~~11F6F7<%F)F,F/F9<#F,%,~S~=~a*ha/2GFT7)Q0~~~relation~~1
+2F6F7<%F%F,F0F9<#F0%+S~=~b*hb/2GFT7)Q0~~~relation~~13F6F7<%F,F'F1F9<#F
+1%+S~=~c*hc/2GFT7)Q0~~~relation~~14F6F7<%F,F-F2F9<#F2%(S~=~p*rGFB7)Q/~
+~relation~~19F6F7<%F%F+F/F9<#F/%/~ha~=~b*sin(C)GFT" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 12 "" 1 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2447 "Completion1 := proc(F,H::s
+et,G::set)\n# Gia su cac quan he trong F co rank = 1\nlocal A1, F1, S,
+ f,f1,uf,vf, x,Atmp,Atmp1, G1,\n    After;\nAfter := proc(vf::set) # x
+et tren (A1,F1)\n  local f1,A,Aold;\n  A := vf;  Aold := \{\};\n  whil
+e A <> Aold do\n    Aold := A;\n    for f1 in F1 do  \n      if `inter
+sect`(`minus`(f1[3],f1[5]),A) <> \{\}\n      then  A := `union`(A,f1[5
+]);\n      fi;\n    od;\n  od; # while\n  RETURN(A);\nend: # After\n\n
+\n# Buoc 1:\nG1 := `minus`(G,H);\nA1 := H;  F1 := \{\};  S := H;\n# Bu
+oc 2:\nfor f in F  do\n  # Xu ly truong hop 1 cua f\n  if `minus`(f[3]
+,A1) = \{\} then\n    if (f[2]=1 and `intersect`(f[3],S)<>\{\}) or\n  \+
+     (f[2]=0 and `minus`(f[5],S)=\{\}) then\n      if f[2]=1 then Atmp
+ := `intersect`(f[3],S);\n      else Atmp := f[5];\n      fi;\n      A
+tmp1 := \{\};\n      for x in Atmp do\n        if `intersect`(`minus`(
+f[3],\{x\}),After(\{x\}))=\{\}\n          then  Atmp1 := `union`(Atmp1
+,\{x\});\n        fi\n      od;\n      if Atmp1 <> \{\} then\n        \+
+if `intersect`(Atmp1,G) <> \{\} then\n          vf := \{`intersect`(At
+mp1,G)[1]\};\n        elif `minus`(Atmp1,H) <> \{\} then\n          vf
+ := \{`minus`(Atmp1,H)[1]\};\n        else vf := \{\};\n        fi;\n \+
+       if vf <> \{\} then \n          S:=`minus`(S,vf); f[5]:=vf; f[2]
+:=0;\n          F1:=`union`(F1,\{f\});\n        fi;\n      fi;\n    fi
+;\n  fi; # end truong hop 1\n  # Xu ly truong hop 2 cua f\n  if `minus
+`(f[3],A1) <> \{\} then\n    if f[2]=1 or `minus`(f[5],A1)<>\{\} then
+\n      vf := \{`minus`(f[3],A1)[1]\};\n      if `minus`(vf,H) <> \{\}
+ then  \n        uf := `minus`(f[3],vf);\n        S := `union`(S,`minu
+s`(uf,A1));\n        A1 := `union`(A1,f[3]);\n        f[2]:=0; f[5]:=v
+f;\n        F1 := `union`(F1,\{f\});\n      fi;\n    elif `minus`(f[5]
+,H)<>\{\} then\n      vf := f[5]; uf := `minus`(f[3],vf);\n      # Loa
+i quan he trong F1 suy ra vf\n      for f1 in F1 do\n        if f1[5] \+
+= vf then\n          F1 := `minus`(F1,\{f1\}); break;\n        fi;\n  \+
+    od;\n      # Loai mot so quan he trong F1 de bao dam tinh phan\n  \+
+    # cap va cap nhat level cua cac phan tu\n      Atmp := `minus`(uf,
+A1);\n      for x in `intersect`(uf,A1,After(vf)) do\n        for f1 i
+n F1 do\n          if f1[5]=\{x\} then\n            Atmp := `union`(At
+mp,\{x\});\n            F1 := `minus`(F1,\{f1\});\n            break;
+\n          fi;\n        od;\n      od; # for x\n      S := `minus`(`u
+nion`(S,Atmp),vf);\n      A1 := `union`(A1,f[3]);\n      F1 := `union`
+(F1,\{f\});\n    fi;\n  fi;\n  # Cap nhat G1\n  G1 := `minus`(G1,A1);
+\nod; # for f\n\nRETURN([S,A1,F1]);\nend: # Completion1\n" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 566 "Completion_test := proc(F,H::set,G
+::set)\nlocal Aset, Fset, BaoH, G1, H1,\n      f, ans, k;\n  Fset := c
+onvert(F,set);\n  Aset := \{\};\n  for f in Fset do\n    Aset := `unio
+n`(Aset,f[3]);\n  od;\n  Aset := `minus`(Aset,`union`(G,Baodongw(Fset,
+H)));\n  ans := false;  k := 0;\n  while (ans = false) and k <= nops(A
+set) do\n    for H1 in combinat[choose](Aset,k) do\n      BaoH := Baod
+ongw(Fset,`union`(H,H1));\n      if `minus`(G,BaoH) = \{\} then\n     \+
+   ans := true;\n        break;\n      fi;\n    od;\n    if ans <> tru
+e then  k := k+1;\n    fi;\n  od; # while\n  RETURN([ans,H1]);\nend:" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "Completion_test(Flist,\{A
+\},\{a\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$%%trueG<#%\"RG" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "Completion1(Flist,\{A\},\{a
+\});" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#7%<%%\"bG%\"AG%\"cG</%\"aGF%%
+\"RG%\"CG%\"SGF&%\"pGF'%\"BG%#haG%#hbG%#hcG%\"rG<,7)Q/~~~relation~~16
+\"\"\"!<&F)F%F&F'\"\"\"<#F)%A~~a^2~=~b^2~+~c^2~-~2*b*c*cos(A)G\"#>7)Q/
+~~~relation~~0F6F7<%F+F&F.F9<#F+%.~~A+B+C~=~Pi~G\"\"#7)Q/~~~relation~~
+4F6F7<&F)F%F&F.F9<#F.%5a*sin(B)~=~b*sin(A)~G\"\")7)Q0~~~~relation~~7F6
+F7<%F)F*F&F9<#F*%/a~=~2*R*sin(A)G\"\"'7)Q0~~~relation~~10F6F7<&F)F%F-F
+'F9<#F-%,2*p~=~a+b+cG\"\"%7)Q0~~~relation~~11F6F7<%F)F,F/F9<#F,%,~S~=~
+a*ha/2GFT7)Q0~~~relation~~12F6F7<%F%F,F0F9<#F0%+S~=~b*hb/2GFT7)Q0~~~re
+lation~~13F6F7<%F,F'F1F9<#F1%+S~=~c*hc/2GFT7)Q0~~~relation~~14F6F7<%F,
+F-F2F9<#F2%(S~=~p*rGFB7)Q/~~relation~~19F6F7<%F%F+F/F9<#F/%/~ha~=~b*si
+n(C)GFT" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "5 0 \+
+0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

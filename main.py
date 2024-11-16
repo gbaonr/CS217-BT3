@@ -59,6 +59,7 @@ def ReadObjectw(filename):
     current_rel = {}
     for line in lines[i:]:
         if "relation" in line:
+
             if current_rel:
                 rel = Relation(**current_rel)
                 # rel.print_relation()
@@ -98,6 +99,11 @@ def ReadObjectw(filename):
         elif "cost" in line:
             cost = int(line.split("=")[-1].strip())
             current_rel["cost"] = cost
+
+    if current_rel:
+        rel = Relation(**current_rel)
+        # rel.print_relation()
+        ob.relations.append(rel)  # Add relation to object
 
     return ob
 
@@ -165,6 +171,7 @@ def ApQuanhe(D, A, output=True):
     Anew = set(A)
     if output:
         print(f"\nApplying {[int(f.id) for f in D]}: on {A}, ", end="")
+        print(f"\texpf: {[f.expf for f in D]}")
     for f in D:
         Mf = set(f.Mf)
         if Mf.issubset(Anew) and len(Mf - Anew - set(f.vf)) == 0:
@@ -198,6 +205,7 @@ def Solutionw(filename, start, end):
     print(f"\n\n\tFINDING SOLUTION {end} FROM {start}\n\n")
 
     if end.issubset(start):
+        return [True, []]
         sol_found = True
 
     while not sol_found and Aold != start:
@@ -221,35 +229,34 @@ def Solutionw(filename, start, end):
     if sol_found:
         # optimize solution
         final_rel = sol[-1]
-        opt_sol = []
-        needed_elements = set(final_rel.Mf) - set(old_start)
 
         print("\n\nFinding optimizing solution ....")
-        for i in range(len(ops_at_step) - 1, -1, -1):
-            print("Step: ", i)
-            print("\tNeeded_elements: ", needed_elements)
-            print("\tOps: ", ops_at_step[i], end="")
-            if ops_at_step[i] == set() or not (
-                ops_at_step[i].issubset(needed_elements)
-            ):
-                print(" -> Skip")
-                continue
-            else:
-                print(" -> Add to optimized solution")
-            ops = ops_at_step[i]
-            if ops == set():
-                continue
-            if ops.issubset(needed_elements):
-                opt_sol.append(sol[i])
-                needed_elements -= ops
-                if needed_elements == set():
-                    print(
-                        f"\n\n Found optimized solution after {len(sol) - i} steps from {len(sol)} steps"
-                    )
-                    break
+        # filter out unused relations
+        print("\n\nFiltering out used relations: ")
+        needs = end.copy()
+        had = old_start.copy()
+        real_opt_sol = []
 
+        while not (needs.issubset(had)):
+
+            print(f"\tNeeds: {needs} - Had: {had}")
+            for i in range(len(ops_at_step)):
+                ops = ops_at_step[i]
+                if ops == set():
+                    continue
+                if ops.issubset(needs):
+                    print(f"\t    -Get {i+1}: {ops}")
+                    rel_needs = set(sol[i].Mf).difference(had)
+                    print(f"\t\tRel {i+1} needs: {rel_needs}")
+                    if len(rel_needs) == 1:
+                        had = had.union(rel_needs)
+                        print("\t\t Get 1 more needs, add to had: ", had)
+                        real_opt_sol.append(sol[i])
+                    else:
+                        needs = needs.union(rel_needs)
+                    print(f"\t\t Add more to Needs: {needs}")
     if sol_found:
-        return [True, opt_sol[::-1]]
+        return [True, real_opt_sol]
     else:
         return [False, []]
 
@@ -272,7 +279,7 @@ def Solve_(input_path):
         return
     print()
     for i in relations[1]:
-        print(f"\t{i.id} - {i.Mf} - {i.expf}")
+        print(f"\tRelation id {i.id} - {i.Mf} - {i.expf}")
 
     # apply solution to get the result
     print("\n\n ....Calculating result....\n\n")
@@ -290,8 +297,10 @@ def Solve_(input_path):
 
     for idx, rel in enumerate(relations[1]):
         found_element = set(rel.Mf).difference(packs)
-        print(f"\tstep {idx+1}: packs = {packs} - found_elements = {found_element}")
+        print(f"\n\tstep {idx+1}: packs = {packs} - found_elements = {found_element}")
         found_element_val = solve(rel.expf.subs(variables), found_element)
+        if found_element_val[0] < 0:
+            found_element_val[0] = abs(found_element_val[0])
         print(
             f"\t\trelation: {rel.expf} - result: {next(iter(found_element))}={found_element_val[0]}"
         )
@@ -324,7 +333,7 @@ print("\n\n\t\tEND")
 # tamgiac = ReadObjectw("code/TAM_GIAC.txt")
 
 # # tamgiac.get_variables(True)
-# # tamgiac.get_relations(True)
+# tamgiac.get_relations(True)
 
 # baodong = Baodong(tamgiac.relations, {"S", "r"})
 # print("\n\nBao dong: ", baodong, " -> ", len(baodong))

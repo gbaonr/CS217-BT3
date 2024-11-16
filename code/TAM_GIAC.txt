@@ -6,9 +6,9 @@ object= TAM_GIAC
       a : Doan[B, C]
       b : Doan[A, C]
       c : Doan[A, B]
-      alpha ="Goc ung voi dinh A cua tam giac"
-      beta ="Goc ung voi dinh B cua tam giac"
-      gamma  ="Goc ung voi dinh C cua tam giac"
+      A ="Goc ung voi dinh A cua tam giac"
+      B ="Goc ung voi dinh B cua tam giac"
+      C  ="Goc ung voi dinh C cua tam giac"
       ha  ="Duong cao ung voi canh a trong tam giac"
       hb  ="Duong cao ung voi canh b trong tam giac"
       hc  ="Duong cao ung voi canh c trong tam giac"
@@ -23,9 +23,9 @@ object= TAM_GIAC
       p ="Nua chu vi cua tam giac"
       R = "Ban kinh duong tron ngoai tiep tam giac"
       r  ="Ban kinh duong tron noi tiep tam giac"
-	 ra = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh a (hay góc A)."
-	 rb = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh b (hay góc B)."
-	 rc = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh c (hay góc C)."
+	 ra = "Ban kinh du?ng trï¿½n b?ng ti?p ?ng v?i c?nh a (hay gï¿½c A)."
+	 rb = "Ban kinh du?ng trï¿½n b?ng ti?p ?ng v?i c?nh b (hay gï¿½c B)."
+	 rc = "Ban kinh du?ng trï¿½n b?ng ti?p ?ng v?i c?nh c (hay gï¿½c C)."
    endvariables
 
    relation  0
@@ -105,6 +105,7 @@ object= TAM_GIAC
      vf    ={}
      expf  =`c = 2*R*sin(C)`
      cost=6
+     
    relation  10
      flag = 1
      Mf    ={p, a, b, c}
@@ -112,6 +113,7 @@ object= TAM_GIAC
      vf    ={}
      expf = `2*p = a+b+c`
      cost=4
+     
    relation  11
      flag  =1
      Mf    ={S, a, ha}
@@ -224,9 +226,11 @@ object= TAM_GIAC
      expf  =`hc = b*sin(A)`
      cost=4
 
-  relation  25
+  relation 25
      flag = 1
-     Mf    ={S, a, b, c, p}
+     Mf    ={P,p}
      rf    =0
-     vf    ={S}
-     expf =`S=sqrt()`
+     vf    ={P}
+     expf =`P= 2*p`
+
+END_FILE

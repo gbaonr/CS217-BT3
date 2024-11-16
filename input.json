@@ -1,10 +1,11 @@
 {
-    "desc": "Cho so do 2 goc cua tam giac, hay tim so do goc con lai",
+    "desc": "Cho tam giac ABC voi AB = AC va BC da biet, hay tinh do dai duong cao AH.",
     "input": {
-        "A": 60,
-        "B": 90
+        "a": 8,
+        "b": 5,
+        "c": 5
     },
     "output": [
-        "C"
+        "ha"
     ]
 }

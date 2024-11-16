@@ -26,9 +26,6 @@ object= TAM_GIAC
       p ="Nua chu vi cua tam giac"
       R = "Ban kinh duong tron ngoai tiep tam giac"
       r  ="Ban kinh duong tron noi tiep tam giac"
-	 ra = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh a (hay góc A)."
-	 rb = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh b (hay góc B)."
-	 rc = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh c (hay góc C)."
    endvariables
 
    relation  0

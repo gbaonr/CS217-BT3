@@ -6,9 +6,9 @@ object= TAM_GIAC
       a : Doan[B, C]
       b : Doan[A, C]
       c : Doan[A, B]
-      alpha ="Goc ung voi dinh A cua tam giac"
-      beta ="Goc ung voi dinh B cua tam giac"
-      gamma  ="Goc ung voi dinh C cua tam giac"
+      A ="Goc ung voi dinh A cua tam giac"
+      B ="Goc ung voi dinh B cua tam giac"
+      C  ="Goc ung voi dinh C cua tam giac"
       ha  ="Duong cao ung voi canh a trong tam giac"
       hb  ="Duong cao ung voi canh b trong tam giac"
       hc  ="Duong cao ung voi canh c trong tam giac"
@@ -23,9 +23,9 @@ object= TAM_GIAC
       p ="Nua chu vi cua tam giac"
       R = "Ban kinh duong tron ngoai tiep tam giac"
       r  ="Ban kinh duong tron noi tiep tam giac"
-	 ra = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh a (hay góc A)."
-	 rb = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh b (hay góc B)."
-	 rc = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh c (hay góc C)."
+	 ra = "Ban kinh du?ng trÃ²n b?ng ti?p ?ng v?i c?nh a (hay gÃ³c A)."
+	 rb = "Ban kinh du?ng trÃ²n b?ng ti?p ?ng v?i c?nh b (hay gÃ³c B)."
+	 rc = "Ban kinh du?ng trÃ²n b?ng ti?p ?ng v?i c?nh c (hay gÃ³c C)."
    endvariables
 
    relation  0

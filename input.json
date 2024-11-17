@@ -1,11 +1,12 @@
 {
-    "desc": "Cho tam giac ABC co do dai 3 canh. Tinh chu vi cua tam giac.",
+    "id": 13,
+    "desc": "Cho tam giac ABC can tai A co canh ben la 30 co dien tich S = 225. D, E lan luot la trung diem cua AB, AC. Tinh EF",
     "input": {
-        "a": 7,
-        "b": 24,
-        "c": 25
+        "S": 225,
+        "c": 30,
+        "b": 30
     },
     "output": [
-        "P"
+        "atb"
     ]
 }

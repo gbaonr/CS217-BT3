@@ -1,0 +1,161 @@
+[
+    {
+        "id": 1,
+        "desc": "Cho so do 2 goc cua tam giac, hay tim so do goc con lai",
+        "input": {
+            "A": 60,
+            "B": 90
+        },
+        "output": [
+            "C"
+        ]
+    },
+    {
+        "id": 2,
+        "desc": "Cho tam giac ABC co do dai canh BC va AC lan luot la 4,5 va chu vi la 14. Tinh canh AB cua tam giac ABC",
+        "input": {
+            "a": 4,
+            "b": 5,
+            "P": 14
+        },
+        "output": [
+            "c"
+        ]
+    },
+    {
+        "id": 3,
+        "desc": "Cho tam giac ABC co do dai canh AC va AB lan luot la 4,5 va chu vi bang 14. Tinh dien tich cua tam giac ABC",
+        "input": {
+            "b": 4,
+            "c": 5,
+            "P": 14
+        },
+        "output": [
+            "S"
+        ]
+    },
+    {
+        "id": 4,
+        "desc": "Cho tam giac ABC co do dai canh BC va AC lan luot la 4,5 va dien tich S=6. Tinh canh AB cua tam giac ABC",
+        "input": {
+            "a": 4,
+            "b": 5,
+            "S": 6
+        },
+        "output": [
+            "c"
+        ]
+    },
+    {
+        "id": 5,
+        "desc": "Cho tam giac vuong tai B va do dai duong cao BM, hay tinh do dai canh BC.",
+        "input": {
+            "c": 10,
+            "hb": 8,
+            "B": 90
+        },
+        "output": [
+            "a"
+        ]
+    },
+    {
+        "id": 6,
+        "desc": "Cho tam giac voi trung tuyen BM va CN, hay tinh do dai canh MN khi dien tich tam giac ABC bang 20 va duong cao AH bang 5 .",
+        "input": {
+            "ha": 5,
+            "S": 20
+        },
+        "output": [
+            "atb"
+        ]
+    },
+    {
+        "id": 7,
+        "desc": "Cho tam giac ABC voi AB = AC va BC da biet, hay tinh do dai duong cao AH.",
+        "input": {
+            "a": 8,
+            "b": 5,
+            "c": 5
+        },
+        "output": [
+            "ha"
+        ]
+    },
+    {
+        "id": 8,
+        "desc": "Cho tam giac ABC co do dai 3 canh. Tinh chu vi va dien tich cua tam giac.",
+        "input": {
+            "a": 7,
+            "b": 24,
+            "c": 25
+        },
+        "output": [
+            "P",
+            "S"
+        ]
+    },
+    {
+        "id": 9,
+        "desc": "Cho tam giac ABC deu co canh day a. Tinh goc A, dien tich va chu vi cua tam giac.",
+        "input": {
+            "a": 10,
+            "b": 10,
+            "c": 10
+        },
+        "output": [
+            "A",
+            "S",
+            "P"
+        ]
+    },
+    {
+        "id": 10,
+        "desc": "Cho tam giac ABC co do dai 3 canh. Tinh ban kinh duong tron noi tiep tam giac.",
+        "input": {
+            "a": 13,
+            "b": 14,
+            "c": 15
+        },
+        "output": [
+            "r"
+        ]
+    },
+    {
+        "id": 11,
+        "desc": "Cho tam giac ABC co 2 canh AB, AC va goc A da biet, AH la duong cao. Tinh canh AC.",
+        "input": {
+            "c": 5,
+            "b": 12,
+            "A": 90
+        },
+        "output": [
+            "ha"
+        ]
+    },
+    {
+        "id": 12,
+        "desc": "Cho tam giac ABC co do dai hai canh va goc giua chung. Tinh canh con lai, dien tich va ban kinh duong tron ngoai tiep tam giac.",
+        "input": {
+            "a": 8,
+            "b": 15,
+            "C": 60
+        },
+        "output": [
+            "c",
+            "S",
+            "R"
+        ]
+    },
+    {
+        "id": 13,
+        "desc": "Cho tam giac ABC can tai A co canh ben la 30 co dien tich S = 225. D, E lan luot la trung diem cua AB, AC. Tinh EF",
+        "input": {
+            "S": 225,
+            "c": 30,
+            "b": 30
+        },
+        "output": [
+            "atb"
+        ]
+    }
+]

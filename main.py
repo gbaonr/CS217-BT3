@@ -366,32 +366,37 @@ def Solve_(input_path):
     # return results dict
     answers = {}
     for key in output:
-        answers[key] = variables[Symbol(key)]
+        if type(variables[Symbol(key)]) == float:
+            answers[key] = round(variables[Symbol(key)], 3)
+        else:
+            answers[key] = round(float(variables[Symbol(key)].evalf()), 3)
     print("\nEnd Solve_")
     return answers
 
 
-# CAll Solve_ function and solve the problem from input.json
-Solve_("input.json")
+"""Run this code to solve a problem from input.json"""
+# # CAll Solve_ function and solve the problem from input.json
+# results = Solve_("input.json")
 
-print("\n\n\t\tEND")
 
+"""Run this code to solve all problems in de_bai.json"""
+with open("problems.json", "r") as file:
+    problems = json.load(file)
+    output_list = []
+    for prob in problems:
+        id = prob["id"]
+        desc = prob["desc"]
+        with open(f"input.json", "w") as file:
+            json.dump(prob, file)
 
-"""test code, not in use"""
-# tamgiac = ReadObjectw("code/TAM_GIAC.txt")
+        results = Solve_("input.json")
+        output_on_file = {}
+        output_on_file["id"] = id
+        output_on_file["desc"] = desc
+        output_on_file["output"] = results
+        output_list.append(output_on_file)
 
-# # tamgiac.get_variables(True)
-# tamgiac.get_relations(True)
+    with open(f"output.json", "w") as file:
+        json.dump(output_list, file)
 
-# baodong = Baodong(tamgiac.relations, {"S", "r"})
-# print("\n\nBao dong: ", baodong, " -> ", len(baodong))
-
-# print("\tKet qua Ap quan he: ", ApQuanhe(tamgiac.relations[:15], {"r"}))
-
-# solution = Solutionw("code/TAM_GIAC.txt", {"a", "b", "c"}, {"S", "r"})
-# if solution[0]:
-#     print("\n\nSolution found: ")
-#     for i in solution[1]:
-#         print(f"\t{i.id} - {i.Mf} - {i.expf}")
-# else:
-#     print("\n\nSolution not found")
+print("\n\n\t\tEND PROGRAM")

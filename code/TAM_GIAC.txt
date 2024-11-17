@@ -248,7 +248,7 @@ object= TAM_GIAC
 
    relation  27
      flag = 1
-     Mf = {mc, mb, atb,a}
+     Mf = {atb,a}
      rf = 1
      vf = {a}
      expf = `a = 2*atb`
@@ -256,7 +256,7 @@ object= TAM_GIAC
 
    relation  28
      flag = 1
-     Mf = {mb, ma, ctb,c}
+     Mf = {ctb,c}
      rf = 1
      vf = {c}
      expf = `c = 2*ctb`
@@ -264,33 +264,9 @@ object= TAM_GIAC
 
    relation  29
      flag = 1
-     Mf = {mc, ma, btb, b}
+     Mf = {btb, b}
      rf = 1
      vf = {b}
      expf = `b = 2*btb`
      cost = 3
 
-   relation  30
-     flag = 1
-     Mf = {mab, mac, atb,a}
-     rf = 1
-     vf = {a}
-     expf = `a = 2*atb`
-     cost = 4
-
-   relation  31
-     flag = 1
-     Mf = {mab, mbc, btb,b}
-     rf = 1
-     vf = {b}
-     expf = `b = 2* btb`
-     cost = 4
-
-   relation  32
-     flag = 1
-     Mf = {mac, mbc, ctb, c}
-     rf = 1
-     vf = {c}
-     expf = `c = 2* ctb`
-     cost = 4
-     

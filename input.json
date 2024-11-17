@@ -1,10 +1,11 @@
 {
-    "desc": "Cho tam giac ABC voi AB = AC va BC da biet, hay tinh do dai duong cao AH.",
+    "desc": "Cho tam giac ABC co do dai 3 canh. Tinh chu vi cua tam giac.",
     "input": {
-        "A": 50,
-        "B": 70
+        "a": 7,
+        "b": 24,
+        "c": 25
     },
     "output": [
-        "C"
+        "P"
     ]
 }

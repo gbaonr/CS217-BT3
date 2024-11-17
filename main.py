@@ -1,4 +1,5 @@
 from sympy import *
+import math
 import json
 from object import Object, Relation
 
@@ -272,6 +273,16 @@ def Solve_(input_path):
     input = read_json["input"]
     output = set(read_json["output"])
 
+    # convert input to radians
+    angle_set = {Symbol("A"), Symbol("B"), Symbol("C")}
+    for key in input:
+        if Symbol(key) in angle_set:
+            input[key] = math.radians(input[key])
+
+    print("\n\n Converted input")
+    for key in input:
+        print(f"\t{key}: {input[key]}")
+
     # find solutions for the problem
     relations = Solutionw("code/TAM_GIAC.txt", input, output)
     if not relations[0]:
@@ -292,6 +303,7 @@ def Solve_(input_path):
     for key in input:
         variables[Symbol(key)] = input[key]
         packs.add(Symbol(key))
+
     print("variables: ", variables)
     print("packs: ", packs, "\n")
 
@@ -302,9 +314,7 @@ def Solve_(input_path):
 
         print(f"\n\t  - Found element values: ")
         for item in found_element_val:
-            print(f"\t\t value = {item}")
-
-        angle_set = {Symbol("A"), Symbol("B"), Symbol("C")}
+            print(f"\t\t value = {item:.2f}")
 
         if rel.expf.has(sin, cos, tan, asin, acos, atan) and found_element.issubset(
             angle_set
@@ -314,32 +324,44 @@ def Solve_(input_path):
                 found_element_val = [
                     item for item in found_element_val if cos(item) >= 0
                 ]
+            if rel.expf.has(cos):
+                found_element_val = [
+                    item for item in found_element_val if sin(item) >= 0
+                ]
             for item in found_element_val:
-                print(f"\t\t value = {item}")
+                print(f"\t\t value = {item:.2f}")
 
         print(f"\n\t  - Filter out negative values: ")
-        if not (found_element.issubset(angle_set)):
+        if found_element.issubset(angle_set):  # neu la goc thi bo qua
             found_element_val = [item for item in found_element_val if item.evalf() > 0]
-        # else:
-        #     found_element_val = [
-        #         (item).replace("pi", "180") for item in found_element_val
-        #     ]
+            # found_element_val = [math.degrees(item) for item in found_element_val]
+        else:  # neu la so thi chi lay so nguyen duong
+            found_element_val = [item for item in found_element_val if item.evalf() > 0]
+
         for item in found_element_val:
             print(f"\t\t value = {item}")
 
         print(
-            f"\n\t\trelation: {rel.expf} - result: {next(iter(found_element))}={found_element_val[0]}"
+            f"\n\t\trelation: {rel.expf} - result: {next(iter(found_element))}={found_element_val[0]:.2f}"
         )
         # add new elements to packs
         for element in found_element:
             packs.add(element)
         print("\t\tnew packs: ", packs)
         variables[list(found_element)[0]] = found_element_val[0]
-        print("\t\tnew variables: ", variables)
+        print(
+            "\t\tnew variables: ", [f"{key}: {variables[key]:.2f}" for key in variables]
+        )
+
+    print("\nAll variables: (angles in degrees)")
+    for key in variables:
+        if key in angle_set:
+            variables[key] = math.degrees(variables[key])
+        print(f"\t{key}: {variables[key]:.2f}")
 
     print("\n\nResult: ")
     for key in output:
-        print(f"\t{key}: {variables[Symbol(key)]}")
+        print(f"\t{key}: {variables[Symbol(key)]:.2f}")
 
     # return results dict
     answers = {}

@@ -299,10 +299,36 @@ def Solve_(input_path):
         found_element = set(rel.Mf).difference(packs)
         print(f"\n\tstep {idx+1}: packs = {packs} - found_elements = {found_element}")
         found_element_val = solve(rel.expf.subs(variables), found_element)
-        if found_element_val[0] < 0:
-            found_element_val[0] = abs(found_element_val[0])
+
+        print(f"\n\t  - Found element values: ")
+        for item in found_element_val:
+            print(f"\t\t value = {item}")
+
+        angle_set = {Symbol("A"), Symbol("B"), Symbol("C")}
+
+        if rel.expf.has(sin, cos, tan, asin, acos, atan) and found_element.issubset(
+            angle_set
+        ):
+            print(f"\n\t  - Filter out angles that not in range [0; pi/2]: ")
+            if rel.expf.has(sin):
+                found_element_val = [
+                    item for item in found_element_val if cos(item) >= 0
+                ]
+            for item in found_element_val:
+                print(f"\t\t value = {item}")
+
+        print(f"\n\t  - Filter out negative values: ")
+        if not (found_element.issubset(angle_set)):
+            found_element_val = [item for item in found_element_val if item.evalf() > 0]
+        # else:
+        #     found_element_val = [
+        #         (item).replace("pi", "180") for item in found_element_val
+        #     ]
+        for item in found_element_val:
+            print(f"\t\t value = {item}")
+
         print(
-            f"\t\trelation: {rel.expf} - result: {next(iter(found_element))}={found_element_val[0]}"
+            f"\n\t\trelation: {rel.expf} - result: {next(iter(found_element))}={found_element_val[0]}"
         )
         # add new elements to packs
         for element in found_element:

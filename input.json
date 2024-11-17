@@ -1,11 +1,10 @@
 {
     "desc": "Cho tam giac ABC voi AB = AC va BC da biet, hay tinh do dai duong cao AH.",
     "input": {
-        "a": 8,
-        "b": 5,
-        "c": 5
+        "A": 50,
+        "B": 70
     },
     "output": [
-        "ha"
+        "C"
     ]
 }

@@ -272,6 +272,7 @@ def Solve_(input_path):
 
     input = read_json["input"]
     output = set(read_json["output"])
+    solutions_steps = {}
 
     # convert input to radians
     angle_set = {Symbol("A"), Symbol("B"), Symbol("C")}
@@ -344,6 +345,23 @@ def Solve_(input_path):
         print(
             f"\n\t\trelation: {rel.expf} - result: {next(iter(found_element))}={found_element_val[0]:.2f}"
         )
+
+        # add step to solutions_steps
+        eq = rel.expf
+        lhs = eq.lhs
+        rhs = eq.rhs
+
+        if found_element.issubset(angle_set):
+            step = {
+                f"step {len(solutions_steps)+1}": f"  {str(lhs)} = {str(rhs)} ==>  {next(iter(found_element))} = {found_element_val[0]:.2f} (rad)  "
+            }
+        else:
+            step = {
+                f"step {len(solutions_steps)+1}": f"  {str(lhs)} = {str(rhs)} ==> {next(iter(found_element))} = {found_element_val[0]:.2f}  "
+            }
+
+        solutions_steps.update(step)
+
         # add new elements to packs
         for element in found_element:
             packs.add(element)
@@ -371,12 +389,14 @@ def Solve_(input_path):
         else:
             answers[key] = round(float(variables[Symbol(key)].evalf()), 3)
     print("\nEnd Solve_")
-    return answers
+    return answers, solutions_steps
 
 
 """Run this code to solve a problem from input.json"""
 # # CAll Solve_ function and solve the problem from input.json
-# results = Solve_("input.json")
+# results, solutions = Solve_("input.json")
+# for sol in solutions.keys():
+#     print(f"{sol}: {solutions[sol]}")
 
 
 """Run this code to solve all problems in de_bai.json"""
@@ -389,14 +409,16 @@ with open("problems.json", "r") as file:
         with open(f"input.json", "w") as file:
             json.dump(prob, file)
 
-        results = Solve_("input.json")
+        results, solutions = Solve_("input.json")
         output_on_file = {}
         output_on_file["id"] = id
         output_on_file["desc"] = desc
         output_on_file["output"] = results
+        output_on_file["solutions"] = solutions
         output_list.append(output_on_file)
 
-    with open(f"output.json", "w") as file:
+    with open(f"answers.json", "w") as file:
         json.dump(output_list, file)
+
 
 print("\n\n\t\tEND PROGRAM")

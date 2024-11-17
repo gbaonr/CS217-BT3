@@ -18,14 +18,20 @@ object= TAM_GIAC
       pa  ="Duong phan giac ung voi canh a trong tam giac"
       pb = "Duong phan giac ung voi canh b trong tam giac"
       pc  ="Duong phan giac ung voi canh c trong tam giac"
+      mab = "Trung diem cua doan AB"
+      mac = "Trung diem cua doan AC"
+      mbc = "Trung diem cua doan BC"
+      atb = "Doan thang noi trung diem cua AB va AC (duong trung binh)"
+      btb = "Doan thang noi trung diem cua AB va BC (duong trung binh)"
+      ctb = "Doan thang noi trung diem cua AC va BC (duong trung binh)"
       S  ="Dien tich tam giac"
       P ="Chu vi cua tam giac"
       p ="Nua chu vi cua tam giac"
       R = "Ban kinh duong tron ngoai tiep tam giac"
       r  ="Ban kinh duong tron noi tiep tam giac"
-	 ra = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh a (hay góc A)."
-	 rb = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh b (hay góc B)."
-	 rc = "Ban kinh du?ng tròn b?ng ti?p ?ng v?i c?nh c (hay góc C)."
+	      ra = "Ban kinh du?ng trÃ²n b?ng ti?p ?ng v?i c?nh a (hay gÃ³c A)."
+	      rb = "Ban kinh du?ng trÃ²n b?ng ti?p ?ng v?i c?nh b (hay gÃ³c B)."
+	      rc = "Ban kinh du?ng trÃ²n b?ng ti?p ?ng v?i c?nh c (hay gÃ³c C)."
    endvariables
 
    relation  0
@@ -226,17 +232,65 @@ object= TAM_GIAC
      expf  =`hc = b*sin(A)`
      cost=4
 
-  relation  25
+   relation  25
      flag = 1
      Mf    ={S, a, b, c, p}
      rf    =0
      vf    ={S}
      expf =`S = sqrt(p*(p-a)*(p-b)*(p-c))`
-     
-  relation  26
+  
+   relation  26
      flag = 1
      Mf    ={P,p}
      rf    =0
      vf    ={P}
      expf =`P= 2*p`
+
+   relation  27
+     flag = 1
+     Mf = {mc, mb, atb,a}
+     rf = 1
+     vf = {a}
+     expf = `a = 2*atb`
+     cost = 3
+
+   relation  28
+     flag = 1
+     Mf = {mb, ma, ctb,c}
+     rf = 1
+     vf = {c}
+     expf = `c = 2*ctb`
+     cost = 3
+
+   relation  29
+     flag = 1
+     Mf = {mc, ma, btb, b}
+     rf = 1
+     vf = {b}
+     expf = `b = 2*btb`
+     cost = 3
+
+   relation  30
+     flag = 1
+     Mf = {mab, mac, atb,a}
+     rf = 1
+     vf = {a}
+     expf = `a = 2*atb`
+     cost = 4
+
+   relation  31
+     flag = 1
+     Mf = {mab, mbc, btb,b}
+     rf = 1
+     vf = {b}
+     expf = `b = 2* btb`
+     cost = 4
+
+   relation  32
+     flag = 1
+     Mf = {mac, mbc, ctb, c}
+     rf = 1
+     vf = {c}
+     expf = `c = 2* ctb`
+     cost = 4
      

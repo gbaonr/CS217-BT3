@@ -81,8 +81,8 @@
         "id": 8,
         "desc": "Cho tam giac ABC co do dai 3 canh. Tinh chu vi va dien tich cua tam giac.",
         "output": {
-            "S": 84.0,
-            "P": 56.0
+            "P": 56.0,
+            "S": 84.0
         },
         "solutions": {
             "step 1": "  2*p = a + b + c ==> p = 28.00  ",
@@ -94,9 +94,9 @@
         "id": 9,
         "desc": "Cho tam giac ABC deu co canh day a. Tinh goc A, dien tich va chu vi cua tam giac.",
         "output": {
-            "S": 43.301,
             "A": 60.0,
-            "P": 30.0
+            "P": 30.0,
+            "S": 43.301
         },
         "solutions": {
             "step 1": "  a**2 = b**2 - 2*b*c*cos(A) + c**2 ==>  A = 1.05 (rad)  ",
@@ -133,9 +133,9 @@
         "id": 12,
         "desc": "Cho tam giac ABC co do dai hai canh va goc giua chung. Tinh canh con lai, dien tich va ban kinh duong tron ngoai tiep tam giac.",
         "output": {
-            "c": 13.0,
+            "R": 7.506,
             "S": 51.962,
-            "R": 7.506
+            "c": 13.0
         },
         "solutions": {
             "step 1": "  c**2 = a**2 - 2*a*b*cos(C) + b**2 ==> c = 13.00  ",

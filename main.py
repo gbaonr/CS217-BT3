@@ -1,7 +1,7 @@
 from sympy import *
 import math
 import json
-from object import Object, Relation
+from code.object import Object, Relation
 
 
 def ReadObjectw(filename):
@@ -394,22 +394,22 @@ def Solve_(input_path):
 
 """Run this code to solve a problem from input.json"""
 # # CAll Solve_ function and solve the problem from input.json
-# results, solutions = Solve_("input.json")
+# results, solutions = Solve_("json/input.json")
 # for sol in solutions.keys():
 #     print(f"{sol}: {solutions[sol]}")
 
 
 """Run this code to solve all problems in de_bai.json"""
-with open("problems.json", "r") as file:
+with open("json/problems.json", "r") as file:
     problems = json.load(file)
     output_list = []
     for prob in problems:
         id = prob["id"]
         desc = prob["desc"]
-        with open(f"input.json", "w") as file:
+        with open(f"json/input.json", "w") as file:
             json.dump(prob, file)
 
-        results, solutions = Solve_("input.json")
+        results, solutions = Solve_("json/input.json")
         output_on_file = {}
         output_on_file["id"] = id
         output_on_file["desc"] = desc
@@ -417,7 +417,7 @@ with open("problems.json", "r") as file:
         output_on_file["solutions"] = solutions
         output_list.append(output_on_file)
 
-    with open(f"answers.json", "w") as file:
+    with open(f"json/answers.json", "w") as file:
         json.dump(output_list, file)
 
 
